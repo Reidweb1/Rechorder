@@ -10,11 +10,12 @@
 		2811CB911A30FC20008FC1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB901A30FC20008FC1B3 /* main.m */; };
 		2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB931A30FC20008FC1B3 /* AppDelegate.m */; };
 		2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB951A30FC20008FC1B3 /* ChordBook.xcdatamodeld */; };
-		2811CB9A1A30FC20008FC1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB991A30FC20008FC1B3 /* ViewController.m */; };
 		2811CB9D1A30FC20008FC1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2811CB9B1A30FC20008FC1B3 /* Main.storyboard */; };
 		2811CB9F1A30FC20008FC1B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2811CB9E1A30FC20008FC1B3 /* Images.xcassets */; };
 		2811CBA21A30FC20008FC1B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */; };
 		2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */; };
+		2811CBB91A3109AA008FC1B3 /* ChordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */; };
+		2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,16 @@
 		2811CB921A30FC20008FC1B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2811CB931A30FC20008FC1B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2811CB961A30FC20008FC1B3 /* ChordBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChordBook.xcdatamodel; sourceTree = "<group>"; };
-		2811CB981A30FC20008FC1B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2811CB991A30FC20008FC1B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2811CB9C1A30FC20008FC1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2811CB9E1A30FC20008FC1B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2811CBA11A30FC20008FC1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2811CBA71A30FC20008FC1B3 /* ChordBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChordBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2811CBAC1A30FC20008FC1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChordBookTests.m; sourceTree = "<group>"; };
+		2811CBB71A3109AA008FC1B3 /* ChordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordTableViewController.h; sourceTree = "<group>"; };
+		2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordTableViewController.m; sourceTree = "<group>"; };
+		2811CBBA1A310A77008FC1B3 /* ChordTableSeeder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordTableSeeder.h; sourceTree = "<group>"; };
+		2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordTableSeeder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +88,10 @@
 			children = (
 				2811CB921A30FC20008FC1B3 /* AppDelegate.h */,
 				2811CB931A30FC20008FC1B3 /* AppDelegate.m */,
-				2811CB981A30FC20008FC1B3 /* ViewController.h */,
-				2811CB991A30FC20008FC1B3 /* ViewController.m */,
+				2811CBB71A3109AA008FC1B3 /* ChordTableViewController.h */,
+				2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */,
+				2811CBBA1A310A77008FC1B3 /* ChordTableSeeder.h */,
+				2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */,
 				2811CB9B1A30FC20008FC1B3 /* Main.storyboard */,
 				2811CB9E1A30FC20008FC1B3 /* Images.xcassets */,
 				2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */,
@@ -222,9 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */,
+				2811CBB91A3109AA008FC1B3 /* ChordTableViewController.m in Sources */,
 				2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
-				2811CB9A1A30FC20008FC1B3 /* ViewController.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

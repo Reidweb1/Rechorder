@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2kl-ez-LNn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Find Chords-->
+        <scene sceneID="NB1-lz-lhZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="M4Y-iN-X9l" customClass="ChordTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dti-fx-cuB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mJb-w8-ilB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mJb-w8-ilB" id="Cnd-oa-KYJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M4Y-iN-X9l" id="xWh-hm-1s4"/>
+                            <outlet property="delegate" destination="M4Y-iN-X9l" id="8m2-2A-unl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" selectedImage="Fret" id="l2T-QH-FNP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wta-wn-EJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="786" y="66"/>
+        </scene>
+        <!--My Songs-->
+        <scene sceneID="SLN-EK-adV">
+            <objects>
+                <viewController id="48q-Fg-3na" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="83j-eL-SMz"/>
+                        <viewControllerLayoutGuide type="bottom" id="9oa-xL-VtQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EqF-yo-899">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Songs" image="Guitar" selectedImage="Fret" id="hgc-yh-ot9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjO-oA-zK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="739"/>
+        </scene>
+        <!--Add Song-->
+        <scene sceneID="qxQ-0K-hTl">
+            <objects>
+                <viewController id="LWh-zn-dfK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vuz-y1-4ZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="uDG-ls-eAV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vZm-Vg-3QV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Song" image="Note" selectedImage="Note" id="JXH-LN-W8l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoU-GT-gKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="1293"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8mj-Ca-6UE">
+            <objects>
+                <tabBarController id="2kl-ez-LNn" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mLe-IS-M9t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="M4Y-iN-X9l" kind="relationship" relationship="viewControllers" id="E0B-KA-ye2"/>
+                        <segue destination="48q-Fg-3na" kind="relationship" relationship="viewControllers" id="QHZ-5R-dSb"/>
+                        <segue destination="LWh-zn-dfK" kind="relationship" relationship="viewControllers" id="wjg-3s-zQr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0h-kx-PD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="408"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fret" width="29" height="30"/>
+        <image name="Guitar" width="30" height="30"/>
+        <image name="Note" width="17" height="30"/>
+    </resources>
 </document>
