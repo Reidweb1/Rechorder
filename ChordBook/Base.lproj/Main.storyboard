@@ -2,34 +2,51 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2kl-ez-LNn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Find Chords-->
-        <scene sceneID="NB1-lz-lhZ">
+        <scene sceneID="vPs-xm-zQN">
             <objects>
-                <tableViewController id="M4Y-iN-X9l" customClass="ChordTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dti-fx-cuB">
+                <viewController id="QYd-Z6-zCY" customClass="ChordsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oae-mn-XDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="rad-iO-UBJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f2U-6m-XWO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Wpw-tr-y8q">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CHORD_CELL" id="HUx-py-ofd">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HUx-py-ofd" id="pW3-rI-dFu">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mJb-w8-ilB">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mJb-w8-ilB" id="Cnd-oa-KYJ">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="M4Y-iN-X9l" id="xWh-hm-1s4"/>
-                            <outlet property="delegate" destination="M4Y-iN-X9l" id="8m2-2A-unl"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" selectedImage="Fret" id="l2T-QH-FNP"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wta-wn-EJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="Wpw-tr-y8q" firstAttribute="top" secondItem="oae-mn-XDd" secondAttribute="bottom" id="LPU-Pp-bNp"/>
+                            <constraint firstItem="Wpw-tr-y8q" firstAttribute="leading" secondItem="f2U-6m-XWO" secondAttribute="leadingMargin" constant="-16" id="dz0-W7-8Ek"/>
+                            <constraint firstItem="Wpw-tr-y8q" firstAttribute="bottom" secondItem="f2U-6m-XWO" secondAttribute="bottomMargin" id="osT-f8-W5T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wpw-tr-y8q" secondAttribute="trailing" constant="-16" id="zq9-mW-8M1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" selectedImage="Fret" id="QdP-4I-yHY"/>
+                    <connections>
+                        <outlet property="tableView" destination="Wpw-tr-y8q" id="fR3-tK-hKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ht-qk-tNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="66"/>
+            <point key="canvasLocation" x="800" y="62"/>
         </scene>
         <!--My Songs-->
         <scene sceneID="SLN-EK-adV">
@@ -80,7 +97,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="M4Y-iN-X9l" kind="relationship" relationship="viewControllers" id="E0B-KA-ye2"/>
+                        <segue destination="QYd-Z6-zCY" kind="relationship" relationship="viewControllers" id="56o-HI-MhU"/>
                         <segue destination="48q-Fg-3na" kind="relationship" relationship="viewControllers" id="QHZ-5R-dSb"/>
                         <segue destination="LWh-zn-dfK" kind="relationship" relationship="viewControllers" id="wjg-3s-zQr"/>
                     </connections>

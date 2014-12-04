@@ -16,6 +16,7 @@
 		2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */; };
 		2811CBB91A3109AA008FC1B3 /* ChordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */; };
 		2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */; };
+		2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBC31A31125D008FC1B3 /* ChordsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordTableViewController.m; sourceTree = "<group>"; };
 		2811CBBA1A310A77008FC1B3 /* ChordTableSeeder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordTableSeeder.h; sourceTree = "<group>"; };
 		2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordTableSeeder.m; sourceTree = "<group>"; };
+		2811CBC21A31125D008FC1B3 /* ChordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordsViewController.h; sourceTree = "<group>"; };
+		2811CBC31A31125D008FC1B3 /* ChordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +91,9 @@
 			children = (
 				2811CB921A30FC20008FC1B3 /* AppDelegate.h */,
 				2811CB931A30FC20008FC1B3 /* AppDelegate.m */,
-				2811CBB71A3109AA008FC1B3 /* ChordTableViewController.h */,
-				2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */,
-				2811CBBA1A310A77008FC1B3 /* ChordTableSeeder.h */,
-				2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */,
-				2811CB9B1A30FC20008FC1B3 /* Main.storyboard */,
-				2811CB9E1A30FC20008FC1B3 /* Images.xcassets */,
-				2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */,
+				2811CBC01A310F8F008FC1B3 /* Model */,
+				2811CBBE1A310F66008FC1B3 /* ViewControllers */,
+				2811CBC11A310FA3008FC1B3 /* View */,
 				2811CB951A30FC20008FC1B3 /* ChordBook.xcdatamodeld */,
 				2811CB8E1A30FC1F008FC1B3 /* Supporting Files */,
 			);
@@ -125,6 +124,36 @@
 				2811CBAC1A30FC20008FC1B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2811CBBE1A310F66008FC1B3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2811CBB71A3109AA008FC1B3 /* ChordTableViewController.h */,
+				2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */,
+				2811CBC21A31125D008FC1B3 /* ChordsViewController.h */,
+				2811CBC31A31125D008FC1B3 /* ChordsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2811CBC01A310F8F008FC1B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2811CBBA1A310A77008FC1B3 /* ChordTableSeeder.h */,
+				2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2811CBC11A310FA3008FC1B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2811CB9B1A30FC20008FC1B3 /* Main.storyboard */,
+				2811CB9E1A30FC20008FC1B3 /* Images.xcassets */,
+				2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +259,7 @@
 				2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */,
 				2811CBB91A3109AA008FC1B3 /* ChordTableViewController.m in Sources */,
 				2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */,
+				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
 			);
