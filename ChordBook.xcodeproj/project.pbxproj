@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2811CB911A30FC20008FC1B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB901A30FC20008FC1B3 /* main.m */; };
+		2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB931A30FC20008FC1B3 /* AppDelegate.m */; };
+		2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB951A30FC20008FC1B3 /* ChordBook.xcdatamodeld */; };
+		2811CB9A1A30FC20008FC1B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CB991A30FC20008FC1B3 /* ViewController.m */; };
+		2811CB9D1A30FC20008FC1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2811CB9B1A30FC20008FC1B3 /* Main.storyboard */; };
+		2811CB9F1A30FC20008FC1B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2811CB9E1A30FC20008FC1B3 /* Images.xcassets */; };
+		2811CBA21A30FC20008FC1B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */; };
+		2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2811CBA81A30FC20008FC1B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2811CB831A30FC1F008FC1B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2811CB8A1A30FC1F008FC1B3;
+			remoteInfo = ChordBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2811CB8B1A30FC1F008FC1B3 /* ChordBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2811CB8F1A30FC20008FC1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2811CB901A30FC20008FC1B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2811CB921A30FC20008FC1B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2811CB931A30FC20008FC1B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2811CB961A30FC20008FC1B3 /* ChordBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChordBook.xcdatamodel; sourceTree = "<group>"; };
+		2811CB981A30FC20008FC1B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2811CB991A30FC20008FC1B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2811CB9C1A30FC20008FC1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2811CB9E1A30FC20008FC1B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2811CBA11A30FC20008FC1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2811CBA71A30FC20008FC1B3 /* ChordBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChordBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2811CBAC1A30FC20008FC1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChordBookTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2811CB881A30FC1F008FC1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2811CBA41A30FC20008FC1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2811CB821A30FC1F008FC1B3 = {
+			isa = PBXGroup;
+			children = (
+				2811CB8D1A30FC1F008FC1B3 /* ChordBook */,
+				2811CBAA1A30FC20008FC1B3 /* ChordBookTests */,
+				2811CB8C1A30FC1F008FC1B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2811CB8C1A30FC1F008FC1B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2811CB8B1A30FC1F008FC1B3 /* ChordBook.app */,
+				2811CBA71A30FC20008FC1B3 /* ChordBookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2811CB8D1A30FC1F008FC1B3 /* ChordBook */ = {
+			isa = PBXGroup;
+			children = (
+				2811CB921A30FC20008FC1B3 /* AppDelegate.h */,
+				2811CB931A30FC20008FC1B3 /* AppDelegate.m */,
+				2811CB981A30FC20008FC1B3 /* ViewController.h */,
+				2811CB991A30FC20008FC1B3 /* ViewController.m */,
+				2811CB9B1A30FC20008FC1B3 /* Main.storyboard */,
+				2811CB9E1A30FC20008FC1B3 /* Images.xcassets */,
+				2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */,
+				2811CB951A30FC20008FC1B3 /* ChordBook.xcdatamodeld */,
+				2811CB8E1A30FC1F008FC1B3 /* Supporting Files */,
+			);
+			path = ChordBook;
+			sourceTree = "<group>";
+		};
+		2811CB8E1A30FC1F008FC1B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2811CB8F1A30FC20008FC1B3 /* Info.plist */,
+				2811CB901A30FC20008FC1B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2811CBAA1A30FC20008FC1B3 /* ChordBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				2811CBAD1A30FC20008FC1B3 /* ChordBookTests.m */,
+				2811CBAB1A30FC20008FC1B3 /* Supporting Files */,
+			);
+			path = ChordBookTests;
+			sourceTree = "<group>";
+		};
+		2811CBAB1A30FC20008FC1B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2811CBAC1A30FC20008FC1B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2811CB8A1A30FC1F008FC1B3 /* ChordBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2811CBB11A30FC20008FC1B3 /* Build configuration list for PBXNativeTarget "ChordBook" */;
+			buildPhases = (
+				2811CB871A30FC1F008FC1B3 /* Sources */,
+				2811CB881A30FC1F008FC1B3 /* Frameworks */,
+				2811CB891A30FC1F008FC1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChordBook;
+			productName = ChordBook;
+			productReference = 2811CB8B1A30FC1F008FC1B3 /* ChordBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2811CBA61A30FC20008FC1B3 /* ChordBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2811CBB41A30FC20008FC1B3 /* Build configuration list for PBXNativeTarget "ChordBookTests" */;
+			buildPhases = (
+				2811CBA31A30FC20008FC1B3 /* Sources */,
+				2811CBA41A30FC20008FC1B3 /* Frameworks */,
+				2811CBA51A30FC20008FC1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2811CBA91A30FC20008FC1B3 /* PBXTargetDependency */,
+			);
+			name = ChordBookTests;
+			productName = ChordBookTests;
+			productReference = 2811CBA71A30FC20008FC1B3 /* ChordBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2811CB831A30FC1F008FC1B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Reid Weber";
+				TargetAttributes = {
+					2811CB8A1A30FC1F008FC1B3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2811CBA61A30FC20008FC1B3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2811CB8A1A30FC1F008FC1B3;
+					};
+				};
+			};
+			buildConfigurationList = 2811CB861A30FC1F008FC1B3 /* Build configuration list for PBXProject "ChordBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2811CB821A30FC1F008FC1B3;
+			productRefGroup = 2811CB8C1A30FC1F008FC1B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2811CB8A1A30FC1F008FC1B3 /* ChordBook */,
+				2811CBA61A30FC20008FC1B3 /* ChordBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2811CB891A30FC1F008FC1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CB9D1A30FC20008FC1B3 /* Main.storyboard in Resources */,
+				2811CBA21A30FC20008FC1B3 /* LaunchScreen.xib in Resources */,
+				2811CB9F1A30FC20008FC1B3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2811CBA51A30FC20008FC1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2811CB871A30FC1F008FC1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */,
+				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
+				2811CB9A1A30FC20008FC1B3 /* ViewController.m in Sources */,
+				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2811CBA31A30FC20008FC1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2811CBA91A30FC20008FC1B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2811CB8A1A30FC1F008FC1B3 /* ChordBook */;
+			targetProxy = 2811CBA81A30FC20008FC1B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2811CB9B1A30FC20008FC1B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2811CB9C1A30FC20008FC1B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2811CBA11A30FC20008FC1B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2811CBAF1A30FC20008FC1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2811CBB01A30FC20008FC1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2811CBB21A30FC20008FC1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChordBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2811CBB31A30FC20008FC1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChordBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2811CBB51A30FC20008FC1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChordBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChordBook.app/ChordBook";
+			};
+			name = Debug;
+		};
+		2811CBB61A30FC20008FC1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChordBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChordBook.app/ChordBook";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2811CB861A30FC1F008FC1B3 /* Build configuration list for PBXProject "ChordBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2811CBAF1A30FC20008FC1B3 /* Debug */,
+				2811CBB01A30FC20008FC1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2811CBB11A30FC20008FC1B3 /* Build configuration list for PBXNativeTarget "ChordBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2811CBB21A30FC20008FC1B3 /* Debug */,
+				2811CBB31A30FC20008FC1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2811CBB41A30FC20008FC1B3 /* Build configuration list for PBXNativeTarget "ChordBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2811CBB51A30FC20008FC1B3 /* Debug */,
+				2811CBB61A30FC20008FC1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2811CB951A30FC20008FC1B3 /* ChordBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2811CB961A30FC20008FC1B3 /* ChordBook.xcdatamodel */,
+			);
+			currentVersion = 2811CB961A30FC20008FC1B3 /* ChordBook.xcdatamodel */;
+			path = ChordBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2811CB831A30FC1F008FC1B3 /* Project object */;
+}
