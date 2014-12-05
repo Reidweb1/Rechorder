@@ -29,7 +29,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="obt-vg-A87" kind="show" id="HbE-ei-Oki"/>
+                                            <segue destination="obt-vg-A87" kind="show" identifier="CHORD_DETAIL" id="HbE-ei-Oki"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="1612" y="62"/>
         </scene>
-        <!--View Controller-->
+        <!--Chord Detail View Controller-->
         <scene sceneID="mhv-CQ-GVk">
             <objects>
-                <viewController id="obt-vg-A87" sceneMemberID="viewController">
+                <viewController id="obt-vg-A87" customClass="ChordDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UfX-dU-vAa"/>
                         <viewControllerLayoutGuide type="bottom" id="dLL-uM-zC2"/>
@@ -86,10 +86,12 @@
                             <constraint firstItem="e3E-6d-vE8" firstAttribute="top" secondItem="uCk-mt-Cdj" secondAttribute="bottom" constant="8" id="ymh-Hd-XVr"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="9RD-bh-5ZN"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chordImageView" destination="e3E-6d-vE8" id="9Ll-ut-7ae"/>
+                        <outlet property="chordNameLabel" destination="uCk-mt-Cdj" id="6d8-o2-LSf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orX-Wb-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,7 +266,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="4D764DBA-E237-41FE-9A66-0EB978845206"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="CCA99DD9-089C-4BFD-B7ED-FD9C60E46C64"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>

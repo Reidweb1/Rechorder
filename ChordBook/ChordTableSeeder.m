@@ -40,9 +40,10 @@
 }
 
 - (NSMutableDictionary *) fillChordImages {
-    NSArray *keys = @[@"A", @"Amin", @"B", @"Bmin", @"C", @"Cmin", @"D", @"Dmin", @"E", @"Emin", @"F", @"Fmin", @"G", @"Gmin"];
-    NSArray *pics = @[[UIImage imageNamed:@"AChordLarge"], [UIImage imageNamed:@"AMinorChord"], [UIImage imageNamed:@"BChord"], [UIImage imageNamed:@"BMinorChord"], [UIImage imageNamed:@"CChord"], [UIImage imageNamed:@"CMinorChord"], [UIImage imageNamed:@"DChord"], [UIImage imageNamed:@"DMinorChord"], [UIImage imageNamed:@"EChord"], [UIImage imageNamed:@"EMinorChord"], [UIImage imageNamed:@"FChord"], [UIImage imageNamed:@"FMinorChord"], [UIImage imageNamed:@"GChord"], [UIImage imageNamed:@"GMinorChord"]];
+    NSArray *keys = @[@"A", @"Am", @"B", @"Bm", @"C", @"Cm", @"D", @"Dm", @"E", @"Em", @"F", @"Fm", @"G", @"Gm"];
+//    NSArray *picNames = @[@"AChordLarge.png", @"AMinorChord", @"BChord", @"BMinorChord", @"CChord", @"CMinorChord", @"DChord", @"DMinorChord", @"EChord", @"EMinorChord", @"FChord", @"FMinorChord", @"GChord", @"GMinorChord"];
     
+    NSArray *pics = @[[UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AMinorChord.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]], [UIImage imageNamed: [NSString stringWithFormat:@"AChordLarge.png"]]];
     NSMutableDictionary *photoDictionary = [NSMutableDictionary dictionaryWithObjects:pics forKeys:keys];
     return photoDictionary;
 }
