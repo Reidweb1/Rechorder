@@ -9,12 +9,14 @@
 #import "ChordsViewController.h"
 #import "ChordTableSeeder.h"
 #import "ChordDetailViewController.h"
+#import "Chord.h"
 
 @interface ChordsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSString *currentChordName;
 @property (strong, nonatomic) UIImage *currentChordImage;
+@property (strong, nonatomic) Chord *currentChord;
 
 @end
 
@@ -46,15 +48,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.currentChordName = [ChordTableSeeder seeder].chords[indexPath.section][indexPath.row];
-    self.currentChordImage = [[ChordTableSeeder seeder].photos valueForKey:self.currentChordName];
+    self.currentChord = [[Chord alloc] init:[[ChordTableSeeder seeder].photos valueForKey:self.currentChordName] withName:[ChordTableSeeder seeder].chords[indexPath.section][indexPath.row]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"CHORD_DETAIL"]) {
         ChordDetailViewController *destinationVC = [segue destinationViewController];
-        destinationVC.chordImageView.image = self.currentChordImage;
-        destinationVC.chordNameLabel.text = self.currentChordName;
+        destinationVC.chordImageView.image = self.currentChord.chordImage;
+        destinationVC.chordNameLabel.text = self.currentChord.chordName;
     }
     
 }

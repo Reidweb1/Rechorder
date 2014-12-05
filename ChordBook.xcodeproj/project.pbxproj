@@ -55,6 +55,12 @@
 		2811CC1B1A3232F2008FC1B3 /* CreateSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC191A3232F2008FC1B3 /* CreateSongViewController.m */; };
 		2811CC1E1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC1D1A323792008FC1B3 /* ChooseChordsViewController.m */; };
 		2811CC1F1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC1D1A323792008FC1B3 /* ChooseChordsViewController.m */; };
+		2811CC221A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC211A323B9F008FC1B3 /* SectionTableViewCell.m */; };
+		2811CC231A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC211A323B9F008FC1B3 /* SectionTableViewCell.m */; };
+		2811CC261A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */; };
+		2811CC271A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */; };
+		2811CC2A1A323E0A008FC1B3 /* Chord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC291A323E0A008FC1B3 /* Chord.m */; };
+		2811CC2B1A323E0A008FC1B3 /* Chord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC291A323E0A008FC1B3 /* Chord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +114,12 @@
 		2811CC191A3232F2008FC1B3 /* CreateSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSongViewController.m; sourceTree = "<group>"; };
 		2811CC1C1A323792008FC1B3 /* ChooseChordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseChordsViewController.h; sourceTree = "<group>"; };
 		2811CC1D1A323792008FC1B3 /* ChooseChordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseChordsViewController.m; sourceTree = "<group>"; };
+		2811CC201A323B9F008FC1B3 /* SectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTableViewCell.h; sourceTree = "<group>"; };
+		2811CC211A323B9F008FC1B3 /* SectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTableViewCell.m; sourceTree = "<group>"; };
+		2811CC241A323CCB008FC1B3 /* ChordCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordCollectionViewCell.h; sourceTree = "<group>"; };
+		2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordCollectionViewCell.m; sourceTree = "<group>"; };
+		2811CC281A323E0A008FC1B3 /* Chord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chord.h; sourceTree = "<group>"; };
+		2811CC291A323E0A008FC1B3 /* Chord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +236,8 @@
 				2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */,
 				2811CC141A32319C008FC1B3 /* CoreDataController.h */,
 				2811CC151A32319C008FC1B3 /* CoreDataController.m */,
+				2811CC281A323E0A008FC1B3 /* Chord.h */,
+				2811CC291A323E0A008FC1B3 /* Chord.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -234,6 +248,10 @@
 				2811CB9B1A30FC20008FC1B3 /* Main.storyboard */,
 				2811CB9E1A30FC20008FC1B3 /* Images.xcassets */,
 				2811CBA01A30FC20008FC1B3 /* LaunchScreen.xib */,
+				2811CC201A323B9F008FC1B3 /* SectionTableViewCell.h */,
+				2811CC211A323B9F008FC1B3 /* SectionTableViewCell.m */,
+				2811CC241A323CCB008FC1B3 /* ChordCollectionViewCell.h */,
+				2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -371,9 +389,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2811CBDF1A313C0E008FC1B3 /* ChordDetailViewController.m in Sources */,
+				2811CC261A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */,
 				2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */,
 				2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */,
+				2811CC221A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */,
 				2811CC1E1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */,
+				2811CC2A1A323E0A008FC1B3 /* Chord.m in Sources */,
 				2811CC161A32319C008FC1B3 /* CoreDataController.m in Sources */,
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
@@ -387,8 +408,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2811CC171A32319C008FC1B3 /* CoreDataController.m in Sources */,
+				2811CC271A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */,
 				2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */,
+				2811CC2B1A323E0A008FC1B3 /* Chord.m in Sources */,
 				2811CC1F1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */,
+				2811CC231A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */,
 				2811CC1B1A3232F2008FC1B3 /* CreateSongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
