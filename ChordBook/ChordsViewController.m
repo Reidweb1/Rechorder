@@ -48,7 +48,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.currentChord = [[Chord alloc] init:[[ChordTableSeeder seeder].photos valueForKey:self.currentChordName] withName:[ChordTableSeeder seeder].chords[indexPath.section][indexPath.row]];
+    self.currentChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

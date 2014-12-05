@@ -219,7 +219,6 @@
                                 </state>
                                 <connections>
                                     <action selector="proceedButtonPressed:" destination="3F6-wk-uoc" eventType="touchUpInside" id="EWs-ED-U1v"/>
-                                    <segue destination="5Fq-Ja-6UV" kind="show" identifier="CHOOSE_CHORDS" id="CLb-ae-Hjm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -258,6 +257,7 @@
                         <outlet property="introSwitch" destination="HIw-Pr-A9V" id="Jln-fk-5dx"/>
                         <outlet property="songTitleTextField" destination="fuM-2g-8zk" id="Jza-BR-z9S"/>
                         <outlet property="verseSwitch" destination="sZC-1h-6Qs" id="Gsj-Ww-Ad6"/>
+                        <segue destination="5Fq-Ja-6UV" kind="show" identifier="CHOOSE_CHORDS" id="HrV-R6-fnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpp-pG-uLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,7 +278,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-ma-cfR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SECTION_CELL" rowHeight="150" id="vmS-dN-8rE" customClass="SectionTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -371,6 +371,93 @@
             </objects>
             <point key="canvasLocation" x="3118" y="735"/>
         </scene>
+        <!--Chord Picker View Controller-->
+        <scene sceneID="1Si-hv-26Y">
+            <objects>
+                <viewController storyboardIdentifier="CHORD_PICKER" id="muF-rx-VPN" customClass="ChordPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bdn-9O-YfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Opv-4F-D88"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x57-Xa-xxb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Tj-mV-Rur">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fH8-cd-Rgg">
+                                    <size key="itemSize" width="125" height="150"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CHORD_PICKER_CELL" id="U2M-iT-KCQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2J-SU-qPv">
+                                                    <rect key="frame" x="8" y="8" width="9" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-JI-3vM">
+                                                    <rect key="frame" x="37" y="37" width="80" height="105"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="105" id="9lB-D0-XAL"/>
+                                                        <constraint firstAttribute="width" constant="80" id="IWW-Rh-UNp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="1A3-JI-3vM" firstAttribute="bottom" secondItem="U2M-iT-KCQ" secondAttribute="bottomMargin" id="3b4-3q-bdD"/>
+                                            <constraint firstItem="x2J-SU-qPv" firstAttribute="top" secondItem="U2M-iT-KCQ" secondAttribute="topMargin" id="eUw-Zw-Y9p"/>
+                                            <constraint firstItem="1A3-JI-3vM" firstAttribute="trailing" secondItem="U2M-iT-KCQ" secondAttribute="trailingMargin" id="hIj-OH-1cS"/>
+                                            <constraint firstItem="x2J-SU-qPv" firstAttribute="leading" secondItem="U2M-iT-KCQ" secondAttribute="leadingMargin" id="qro-BS-VlL"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PICKER_HEADER" id="VBL-AH-aoB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick A Chord To Add" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-dI-LGi">
+                                            <rect key="frame" x="195" y="10" width="211" height="29"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="cNc-dI-LGi" secondAttribute="centerY" id="OmD-d3-I8p"/>
+                                        <constraint firstAttribute="centerX" secondItem="cNc-dI-LGi" secondAttribute="centerX" id="lH2-Tf-mEL"/>
+                                    </constraints>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Tj-mV-Rur" secondAttribute="trailing" constant="-16" id="5Ti-Gn-uDK"/>
+                            <constraint firstItem="7Tj-mV-Rur" firstAttribute="top" secondItem="Bdn-9O-YfZ" secondAttribute="bottom" id="IN1-ZW-Lwd"/>
+                            <constraint firstItem="7Tj-mV-Rur" firstAttribute="leading" secondItem="x57-Xa-xxb" secondAttribute="leadingMargin" constant="-16" id="NoR-zZ-iZf"/>
+                            <constraint firstItem="Opv-4F-D88" firstAttribute="top" secondItem="7Tj-mV-Rur" secondAttribute="bottom" id="U3x-Fv-Jhi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="7Tj-mV-Rur" id="Jwy-Th-a6S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iw4-f5-pXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3795" y="735"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8mj-Ca-6UE">
             <objects>
@@ -396,7 +483,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="C3B23210-AECD-4F80-9020-6D8F435B6D4F"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="5123B935-6850-48C4-A93F-B0B922C6A527"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>

@@ -61,6 +61,8 @@
 		2811CC271A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */; };
 		2811CC2A1A323E0A008FC1B3 /* Chord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC291A323E0A008FC1B3 /* Chord.m */; };
 		2811CC2B1A323E0A008FC1B3 /* Chord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC291A323E0A008FC1B3 /* Chord.m */; };
+		2811CC2E1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */; };
+		2811CC2F1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		2811CC251A323CCB008FC1B3 /* ChordCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordCollectionViewCell.m; sourceTree = "<group>"; };
 		2811CC281A323E0A008FC1B3 /* Chord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chord.h; sourceTree = "<group>"; };
 		2811CC291A323E0A008FC1B3 /* Chord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chord.m; sourceTree = "<group>"; };
+		2811CC2C1A324C49008FC1B3 /* ChordPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordPickerViewController.h; sourceTree = "<group>"; };
+		2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +229,8 @@
 				2811CC191A3232F2008FC1B3 /* CreateSongViewController.m */,
 				2811CC1C1A323792008FC1B3 /* ChooseChordsViewController.h */,
 				2811CC1D1A323792008FC1B3 /* ChooseChordsViewController.m */,
+				2811CC2C1A324C49008FC1B3 /* ChordPickerViewController.h */,
+				2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				2811CB971A30FC20008FC1B3 /* ChordBook.xcdatamodeld in Sources */,
 				2811CC221A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */,
 				2811CC1E1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */,
+				2811CC2E1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */,
 				2811CC2A1A323E0A008FC1B3 /* Chord.m in Sources */,
 				2811CC161A32319C008FC1B3 /* CoreDataController.m in Sources */,
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
@@ -410,6 +417,7 @@
 				2811CC171A32319C008FC1B3 /* CoreDataController.m in Sources */,
 				2811CC271A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */,
 				2811CBAE1A30FC20008FC1B3 /* ChordBookTests.m in Sources */,
+				2811CC2F1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */,
 				2811CC2B1A323E0A008FC1B3 /* Chord.m in Sources */,
 				2811CC1F1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */,
 				2811CC231A323B9F008FC1B3 /* SectionTableViewCell.m in Sources */,

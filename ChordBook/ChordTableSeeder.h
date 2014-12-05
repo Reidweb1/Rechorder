@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) NSArray *rootNotes;
 @property (strong, nonatomic) NSArray *chords;
-@property (strong, nonatomic) NSMutableDictionary *photos;
+@property (strong, nonatomic) NSMutableArray *chordObjects;
 
 @end

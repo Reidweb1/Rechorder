@@ -29,7 +29,7 @@
 }
 
 - (IBAction)proceedButtonPressed:(id)sender {
-    
+    [self performSegueWithIdentifier:@"CHOOSE_CHORDS" sender:self];
 }
 
 - (IBAction)introSwitchPressed:(id)sender {
