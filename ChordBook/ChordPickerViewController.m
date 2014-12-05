@@ -7,6 +7,9 @@
 //
 
 #import "ChordPickerViewController.h"
+#import "ChordTableSeeder.h"
+#import "ChordPickerCollectionViewCell.h"
+#import "Chord.h"
 
 @interface ChordPickerViewController ()
 
@@ -27,22 +30,23 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return [[ChordTableSeeder seeder].chordObjects count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [[UICollectionViewCell alloc] init];
+    ChordPickerCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CHORD_PICKER_CELL" forIndexPath:indexPath];
+    cell.chordTitleLabel.text = @"TEST";
+//    ChordPickerCollectionViewCell *cell = [[ChordPickerCollectionViewCell alloc] init];
+//    Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+//    cell.chordTitleLabel.text = chord.chordName;
+//    cell.chordImageView.image = chord.chordImage;
     return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    Chord *selectedChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    [self.senderCell.chords addObject:selectedChord];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
-*/
 
 @end

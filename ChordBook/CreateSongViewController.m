@@ -11,7 +11,7 @@
 
 @interface CreateSongViewController ()
 
-@property (strong, nonatomic) NSMutableArray *sections;
+@property (strong, nonatomic) NSMutableDictionary *sections;
 
 @end
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sections = [[NSMutableArray alloc] init];
+    self.sections = [[NSMutableDictionary alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -34,33 +34,33 @@
 
 - (IBAction)introSwitchPressed:(id)sender {
     if (self.introSwitch.on) {
-        [self.sections insertObject:@"Intro:" atIndex:0];
+        [self.sections setValue:@"On" forKey:@"Intro:"];
     } else {
-        [self.sections insertObject:@"NULL" atIndex:0];
+        [self.sections setValue:@"Off" forKey:@"Intro:"];
     }
 }
 
 - (IBAction)verseSwitchPressed:(id)sender {
     if (self.verseSwitch.on) {
-        [self.sections insertObject:@"Verse:" atIndex:1];
+        [self.sections setValue:@"On" forKey:@"Verse:"];
     } else {
-        [self.sections insertObject:@"NULL" atIndex:1];
+        [self.sections setValue:@"Off" forKey:@"Verse:"];
     }
 }
 
 - (IBAction)chorusSwitchPressed:(id)sender {
     if (self.chorusSwitch.on) {
-        [self.sections insertObject:@"Chorus:" atIndex:2];
+        [self.sections setValue:@"On" forKey:@"Chorus:"];
     } else {
-        [self.sections insertObject:@"NULL" atIndex:2];
+        [self.sections setValue:@"Off" forKey:@"Chorus:"];
     }
 }
 
 - (IBAction)bridgeSwitchPressed:(id)sender {
     if (self.bridgeSwitch.on) {
-        [self.sections insertObject:@"Bridge:" atIndex:3];
+        [self.sections setValue:@"On" forKey:@"Bridge:"];
     } else {
-        [self.sections insertObject:@"NULL" atIndex:3];
+        [self.sections setValue:@"Off" forKey:@"Bridge:"];
     }
 }
 

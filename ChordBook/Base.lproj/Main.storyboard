@@ -157,12 +157,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-1h-6Qs">
-                                <rect key="frame" x="101" y="227" width="51" height="31"/>
-                                <connections>
-                                    <action selector="verseSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="8be-bM-r20"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Chords For:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-op-O7y">
                                 <rect key="frame" x="16" y="149" width="182" height="31"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="27"/>
@@ -181,19 +175,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-ez-ytw">
-                                <rect key="frame" x="101" y="266" width="51" height="31"/>
-                                <connections>
-                                    <action selector="chorusSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="lXG-gR-kw8"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bridge:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-Wl-rOc">
                                 <rect key="frame" x="16" y="308" width="69" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-Cq-O0c">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-Cq-O0c">
                                 <rect key="frame" x="101" y="305" width="51" height="31"/>
                                 <connections>
                                     <action selector="bridgeSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="naY-lx-ke2"/>
@@ -221,9 +209,22 @@
                                     <action selector="proceedButtonPressed:" destination="3F6-wk-uoc" eventType="touchUpInside" id="EWs-ED-U1v"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="re0-De-1al">
+                                <rect key="frame" x="101" y="228" width="51" height="31"/>
+                                <connections>
+                                    <action selector="verseSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="k4S-B5-1XZ"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lef-41-HDO">
+                                <rect key="frame" x="101" y="267" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chorusSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="fGX-lO-XWi"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="re0-De-1al" firstAttribute="top" secondItem="HIw-Pr-A9V" secondAttribute="bottom" constant="9" id="0XI-NQ-UI8"/>
                             <constraint firstItem="uB9-Au-U8J" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="12z-f6-l8O"/>
                             <constraint firstItem="HIw-Pr-A9V" firstAttribute="leading" secondItem="gdA-Nw-AwF" secondAttribute="trailing" constant="38" id="2ax-Ga-bPO"/>
                             <constraint firstItem="fXB-op-O7y" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="4PM-5N-4cA"/>
@@ -233,30 +234,28 @@
                             <constraint firstItem="fuM-2g-8zk" firstAttribute="trailing" secondItem="81R-Ma-CO5" secondAttribute="trailingMargin" id="FVK-Sy-f3R"/>
                             <constraint firstItem="Nch-Mj-WYb" firstAttribute="top" secondItem="gdA-Nw-AwF" secondAttribute="bottom" constant="11" id="Hdw-N5-43u"/>
                             <constraint firstItem="gdA-Nw-AwF" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="Iob-nI-U4h"/>
-                            <constraint firstItem="sZC-1h-6Qs" firstAttribute="top" secondItem="HIw-Pr-A9V" secondAttribute="bottom" constant="8" id="UQL-ak-UUk"/>
+                            <constraint firstItem="lef-41-HDO" firstAttribute="leading" secondItem="KMg-fN-wUM" secondAttribute="trailing" constant="8" id="N9C-RY-SJH"/>
                             <constraint firstItem="NkG-MR-cjB" firstAttribute="top" secondItem="shE-wX-IzS" secondAttribute="bottom" constant="8" id="V5e-v6-jN9"/>
                             <constraint firstItem="fXB-op-O7y" firstAttribute="top" secondItem="fuM-2g-8zk" secondAttribute="bottom" constant="8" id="a9O-SX-PtG"/>
                             <constraint firstItem="fuM-2g-8zk" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="cZR-Xh-ykQ"/>
                             <constraint firstItem="sMR-Wl-rOc" firstAttribute="top" secondItem="KMg-fN-wUM" secondAttribute="bottom" constant="11" id="ger-i5-AoJ"/>
-                            <constraint firstItem="6eu-ez-ytw" firstAttribute="leading" secondItem="KMg-fN-wUM" secondAttribute="trailing" constant="8" id="h9u-7Y-Rr7"/>
                             <constraint firstItem="V3n-Cq-O0c" firstAttribute="leading" secondItem="sMR-Wl-rOc" secondAttribute="trailing" constant="16" id="heb-kk-O71"/>
                             <constraint firstItem="sMR-Wl-rOc" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="jtJ-F8-rrJ"/>
-                            <constraint firstItem="6eu-ez-ytw" firstAttribute="top" secondItem="sZC-1h-6Qs" secondAttribute="bottom" constant="8" id="lcq-ke-F7q"/>
                             <constraint firstItem="shE-wX-IzS" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="lx6-iI-eHZ"/>
                             <constraint firstItem="HIw-Pr-A9V" firstAttribute="top" secondItem="fXB-op-O7y" secondAttribute="bottom" constant="8" id="mlX-7T-hdP"/>
-                            <constraint firstItem="sZC-1h-6Qs" firstAttribute="leading" secondItem="Nch-Mj-WYb" secondAttribute="trailing" constant="24" id="o07-dx-t9f"/>
                             <constraint firstItem="KMg-fN-wUM" firstAttribute="top" secondItem="Nch-Mj-WYb" secondAttribute="bottom" constant="11" id="qpi-bO-Xw1"/>
                             <constraint firstItem="gdA-Nw-AwF" firstAttribute="top" secondItem="fXB-op-O7y" secondAttribute="bottom" constant="11" id="rjh-da-eKO"/>
+                            <constraint firstItem="re0-De-1al" firstAttribute="leading" secondItem="Nch-Mj-WYb" secondAttribute="trailing" constant="24" id="t4A-RF-rom"/>
                             <constraint firstItem="uB9-Au-U8J" firstAttribute="top" secondItem="D2u-VU-c0j" secondAttribute="bottom" constant="8" id="vCw-Nt-Qel"/>
-                            <constraint firstItem="V3n-Cq-O0c" firstAttribute="top" secondItem="6eu-ez-ytw" secondAttribute="bottom" constant="8" id="xuq-E5-g5l"/>
+                            <constraint firstItem="lef-41-HDO" firstAttribute="top" secondItem="re0-De-1al" secondAttribute="bottom" constant="8" id="wNi-NF-p18"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bridgeSwitch" destination="V3n-Cq-O0c" id="u1P-AW-Qaz"/>
-                        <outlet property="chorusSwitch" destination="6eu-ez-ytw" id="sjT-2c-kbj"/>
+                        <outlet property="chorusSwitch" destination="lef-41-HDO" id="9yX-TZ-9DU"/>
                         <outlet property="introSwitch" destination="HIw-Pr-A9V" id="Jln-fk-5dx"/>
                         <outlet property="songTitleTextField" destination="fuM-2g-8zk" id="Jza-BR-z9S"/>
-                        <outlet property="verseSwitch" destination="sZC-1h-6Qs" id="Gsj-Ww-Ad6"/>
+                        <outlet property="verseSwitch" destination="re0-De-1al" id="Xc5-9o-WB0"/>
                         <segue destination="5Fq-Ja-6UV" kind="show" identifier="CHOOSE_CHORDS" id="HrV-R6-fnG"/>
                     </connections>
                 </viewController>
@@ -298,6 +297,10 @@
                                                     <state key="normal" title="+ Add Chord">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addChordButtonPressed:" destination="vmS-dN-8rE" eventType="touchUpInside" id="yMz-Lx-DEc"/>
+                                                        <segue destination="muF-rx-VPN" kind="presentation" identifier="SHOW_CHORD_PICKER" id="vPE-fu-IZH"/>
+                                                    </connections>
                                                 </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TOZ-32-Ura">
                                                     <rect key="frame" x="8" y="39" width="584" height="105"/>
@@ -393,7 +396,7 @@
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CHORD_PICKER_CELL" id="U2M-iT-KCQ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CHORD_PICKER_CELL" id="U2M-iT-KCQ" customClass="ChordPickerCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -422,6 +425,10 @@
                                             <constraint firstItem="1A3-JI-3vM" firstAttribute="trailing" secondItem="U2M-iT-KCQ" secondAttribute="trailingMargin" id="hIj-OH-1cS"/>
                                             <constraint firstItem="x2J-SU-qPv" firstAttribute="leading" secondItem="U2M-iT-KCQ" secondAttribute="leadingMargin" id="qro-BS-VlL"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="chordImageView" destination="1A3-JI-3vM" id="7qc-Qn-Zct"/>
+                                            <outlet property="chordTitleLabel" destination="x2J-SU-qPv" id="uaH-mx-OUB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PICKER_HEADER" id="VBL-AH-aoB">
@@ -483,7 +490,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="5123B935-6850-48C4-A93F-B0B922C6A527"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="909F9922-0C11-455E-A7AF-32BB3CCCEC09"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>

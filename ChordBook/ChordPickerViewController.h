@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SectionTableViewCell.h"
 
 @interface ChordPickerViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) SectionTableViewCell *senderCell;
 
 @end

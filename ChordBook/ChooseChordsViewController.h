@@ -10,7 +10,7 @@
 
 @interface ChooseChordsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *sections;
+@property (strong, nonatomic) NSMutableDictionary *sections;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

@@ -8,10 +8,12 @@
 
 #import "ChooseChordsViewController.h"
 #import "SectionTableViewCell.h"
+#import "ChordPickerViewController.h"
 
 @interface ChooseChordsViewController ()
 
 @property (strong, nonatomic) NSMutableArray *includedSections;
+@property (strong, nonatomic) SectionTableViewCell *currentSection;
 
 @end
 
@@ -22,16 +24,22 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.includedSections = [[NSMutableArray alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addChordPressed:) name: @"ADD_CHORD_FOR_SECTION" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    int index = 0;
-    for (NSString *sectionName in self.sections) {
-        if (![sectionName isEqualToString:@"NULL"]) {
-            [self.includedSections insertObject:sectionName atIndex:index];
-            index++;
-        }
+    if ([[self.sections objectForKey:@"Intro:"] isEqualToString:@"On"]) {
+        [self.includedSections addObject:@"Intro:"];
+    }
+    if ([[self.sections objectForKey:@"Verse:"] isEqualToString:@"On"]) {
+        [self.includedSections addObject:@"Verse:"];
+    }
+    if ([[self.sections objectForKey:@"Chorus:"] isEqualToString:@"On"]) {
+        [self.includedSections addObject:@"Chorus:"];
+    }
+    if ([[self.sections objectForKey:@"Bridge:"] isEqualToString:@"On"]) {
+        [self.includedSections addObject:@"Bridge:"];
     }
     [self.tableView reloadData];
 }
@@ -49,6 +57,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.includedSections count];
+}
+
+- (void) addChordPressed:(NSNotification *)notification {
+    NSLog(@"ChordButtonPressed");
+    if ([notification.object isMemberOfClass:([SectionTableViewCell class])]) {
+        self.currentSection = notification.object;
+    } else {
+        NSLog(@"ERROR: Notification Center on Choose Chord VC");
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_CHORD_PICKER"]) {
+        ChordPickerViewController *destinationVC = segue.destinationViewController;
+        destinationVC.senderCell = self.currentSection;
+    }
 }
 
 @end
