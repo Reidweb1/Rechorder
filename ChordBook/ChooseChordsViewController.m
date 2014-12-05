@@ -25,10 +25,7 @@
     self.tableView.delegate = self;
     self.includedSections = [[NSMutableArray alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addChordPressed:) name: @"ADD_CHORD_FOR_SECTION" object:nil];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    
     if ([[self.sections objectForKey:@"Intro:"] isEqualToString:@"On"]) {
         [self.includedSections addObject:@"Intro:"];
     }
@@ -42,6 +39,12 @@
         [self.includedSections addObject:@"Bridge:"];
     }
     [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.currentSection) {
+        [self.currentSection.collectionView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,8 @@
 
 - (void)awakeFromNib {
     self.chords = [[NSMutableArray alloc] init];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     //self.viewController = [[UIViewController alloc] init];
 }
 
@@ -27,7 +29,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ChordCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"SECTION_COLLECTION" forIndexPath:indexPath];
     Chord *chord = [self.chords objectAtIndex:indexPath.row];
-    cell.chordLabel.text = chord.chordName;
+    cell.chordLabel.text = @"TEST";
     cell.chordImageView.image = chord.chordImage;
     return cell;
 }
