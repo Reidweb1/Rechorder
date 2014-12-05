@@ -181,12 +181,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-Cq-O0c">
-                                <rect key="frame" x="101" y="305" width="51" height="31"/>
-                                <connections>
-                                    <action selector="bridgeSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="naY-lx-ke2"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intro:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-Nw-AwF">
                                 <rect key="frame" x="16" y="191" width="47" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
@@ -221,6 +215,12 @@
                                     <action selector="chorusSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="fGX-lO-XWi"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-Cq-O0c">
+                                <rect key="frame" x="101" y="308" width="51" height="31"/>
+                                <connections>
+                                    <action selector="bridgeSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="naY-lx-ke2"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -238,6 +238,7 @@
                             <constraint firstItem="NkG-MR-cjB" firstAttribute="top" secondItem="shE-wX-IzS" secondAttribute="bottom" constant="8" id="V5e-v6-jN9"/>
                             <constraint firstItem="fXB-op-O7y" firstAttribute="top" secondItem="fuM-2g-8zk" secondAttribute="bottom" constant="8" id="a9O-SX-PtG"/>
                             <constraint firstItem="fuM-2g-8zk" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="cZR-Xh-ykQ"/>
+                            <constraint firstItem="V3n-Cq-O0c" firstAttribute="top" secondItem="lef-41-HDO" secondAttribute="bottom" constant="10" id="eMg-BE-ZwX"/>
                             <constraint firstItem="sMR-Wl-rOc" firstAttribute="top" secondItem="KMg-fN-wUM" secondAttribute="bottom" constant="11" id="ger-i5-AoJ"/>
                             <constraint firstItem="V3n-Cq-O0c" firstAttribute="leading" secondItem="sMR-Wl-rOc" secondAttribute="trailing" constant="16" id="heb-kk-O71"/>
                             <constraint firstItem="sMR-Wl-rOc" firstAttribute="leading" secondItem="81R-Ma-CO5" secondAttribute="leadingMargin" id="jtJ-F8-rrJ"/>
@@ -275,11 +276,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-ma-cfR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-ma-cfR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SECTION_CELL" rowHeight="150" id="vmS-dN-8rE" customClass="SectionTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SECTION_CELL" rowHeight="200" id="vmS-dN-8rE" customClass="SectionTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vmS-dN-8rE" id="b6x-jw-rM8">
@@ -303,33 +304,44 @@
                                                     </connections>
                                                 </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TOZ-32-Ura">
-                                                    <rect key="frame" x="8" y="39" width="584" height="105"/>
+                                                    <rect key="frame" x="8" y="45" width="584" height="146"/>
+                                                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9l-c6-gUh">
-                                                        <size key="itemSize" width="100" height="100"/>
+                                                        <size key="itemSize" width="125" height="125"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" reuseIdentifier="SECTION_COLLECTION" id="SbM-2G-c7M" customClass="ChordCollectionViewCell">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Am-HVR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Am-HVR">
                                                                         <rect key="frame" x="8" y="8" width="10" height="20"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
-                                                                        <rect key="frame" x="26" y="8" width="66" height="84"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
+                                                                        <rect key="frame" x="42" y="8" width="75" height="109"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="75" id="sK8-pb-osO"/>
+                                                                        </constraints>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="vaz-Am-HVR" firstAttribute="leading" secondItem="SbM-2G-c7M" secondAttribute="leadingMargin" id="9vJ-qU-MbL"/>
+                                                                <constraint firstItem="vaz-Am-HVR" firstAttribute="top" secondItem="SbM-2G-c7M" secondAttribute="topMargin" id="LIx-o4-pPq"/>
+                                                                <constraint firstItem="5h0-70-4DV" firstAttribute="top" secondItem="SbM-2G-c7M" secondAttribute="topMargin" id="dlw-oh-TPS"/>
+                                                                <constraint firstItem="5h0-70-4DV" firstAttribute="trailing" secondItem="SbM-2G-c7M" secondAttribute="trailingMargin" id="dsT-Bn-vcR"/>
+                                                                <constraint firstItem="5h0-70-4DV" firstAttribute="bottom" secondItem="SbM-2G-c7M" secondAttribute="bottomMargin" id="rT0-Ab-2ml"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="chordImageView" destination="5h0-70-4DV" id="6dK-fP-gZe"/>
                                                                 <outlet property="chordLabel" destination="vaz-Am-HVR" id="J0j-Mk-kdo"/>
@@ -340,12 +352,12 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="top" secondItem="0SF-fG-Wm0" secondAttribute="bottom" constant="2" id="5Aa-MJ-JjJ"/>
                                                 <constraint firstItem="BzG-Jz-Ul2" firstAttribute="leading" secondItem="b6x-jw-rM8" secondAttribute="leadingMargin" id="5va-ce-gGA"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TOZ-32-Ura" secondAttribute="bottom" constant="-3" id="IZC-aa-2Wu"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="leading" secondItem="b6x-jw-rM8" secondAttribute="leadingMargin" id="SrJ-Yb-Fzx"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="trailing" secondItem="b6x-jw-rM8" secondAttribute="trailingMargin" id="U4C-TW-UNV"/>
                                                 <constraint firstItem="0SF-fG-Wm0" firstAttribute="top" secondItem="b6x-jw-rM8" secondAttribute="topMargin" constant="-6" id="W1S-zI-8b8"/>
-                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="trailing" secondItem="b6x-jw-rM8" secondAttribute="trailingMargin" id="ka5-3C-DFZ"/>
-                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="leading" secondItem="b6x-jw-rM8" secondAttribute="leadingMargin" id="mDD-Re-fho"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="top" secondItem="0SF-fG-Wm0" secondAttribute="bottom" constant="8" id="rES-3w-xfg"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="bottom" secondItem="b6x-jw-rM8" secondAttribute="bottomMargin" id="svN-ii-0FR"/>
                                                 <constraint firstItem="BzG-Jz-Ul2" firstAttribute="top" secondItem="b6x-jw-rM8" secondAttribute="topMargin" id="u8a-gT-qDd"/>
                                                 <constraint firstItem="0SF-fG-Wm0" firstAttribute="trailing" secondItem="b6x-jw-rM8" secondAttribute="trailingMargin" id="vnY-lr-S07"/>
                                             </constraints>
@@ -372,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNt-6t-tbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3118" y="735"/>
+            <point key="canvasLocation" x="3118" y="734"/>
         </scene>
         <!--Chord Picker View Controller-->
         <scene sceneID="1Si-hv-26Y">
@@ -490,7 +502,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="909F9922-0C11-455E-A7AF-32BB3CCCEC09"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="063CCA50-3E9B-45DC-A7A4-76C6E9C2C3C7"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
