@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1678" y="739"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Song View Controller-->
         <scene sceneID="t3a-lf-muv">
             <objects>
-                <viewController id="3F6-wk-uoc" sceneMemberID="viewController">
+                <viewController id="3F6-wk-uoc" customClass="CreateSongViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D2u-VU-c0j"/>
                         <viewControllerLayoutGuide type="bottom" id="NkG-MR-cjB"/>
@@ -205,6 +205,10 @@
                                 <state key="normal" title="Proceed">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="proceedButtonPressed:" destination="3F6-wk-uoc" eventType="touchUpInside" id="EWs-ED-U1v"/>
+                                    <segue destination="5Fq-Ja-6UV" kind="show" identifier="CHOOSE_CHORDS" id="CLb-ae-Hjm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
@@ -236,10 +240,113 @@
                             <constraint firstItem="V3n-Cq-O0c" firstAttribute="top" secondItem="6eu-ez-ytw" secondAttribute="bottom" constant="8" id="xuq-E5-g5l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bridgeSwitch" destination="V3n-Cq-O0c" id="u1P-AW-Qaz"/>
+                        <outlet property="chorusSwitch" destination="6eu-ez-ytw" id="sjT-2c-kbj"/>
+                        <outlet property="introSwitch" destination="HIw-Pr-A9V" id="Jln-fk-5dx"/>
+                        <outlet property="songTitleTextField" destination="fuM-2g-8zk" id="Jza-BR-z9S"/>
+                        <outlet property="verseSwitch" destination="sZC-1h-6Qs" id="Gsj-Ww-Ad6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tpp-pG-uLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2373" y="739"/>
+        </scene>
+        <!--Choose Chords View Controller-->
+        <scene sceneID="3jc-Cw-b3M">
+            <objects>
+                <viewController id="5Fq-Ja-6UV" customClass="ChooseChordsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UuD-3b-HZV"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5h-G8-gMe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QFd-K8-3NO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-ma-cfR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="vmS-dN-8rE">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vmS-dN-8rE" id="b6x-jw-rM8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intro:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzG-Jz-Ul2">
+                                                    <rect key="frame" x="8" y="8" width="39" height="23"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-fG-Wm0">
+                                                    <rect key="frame" x="485" y="2" width="107" height="35"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                                    <state key="normal" title="+ Add Chord">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TOZ-32-Ura">
+                                                    <rect key="frame" x="8" y="39" width="584" height="105"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9l-c6-gUh">
+                                                        <size key="itemSize" width="100" height="100"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" id="SbM-2G-c7M">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Am-HVR">
+                                                                        <rect key="frame" x="8" y="8" width="10" height="20"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
+                                                                        <rect key="frame" x="26" y="8" width="66" height="84"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="top" secondItem="0SF-fG-Wm0" secondAttribute="bottom" constant="2" id="5Aa-MJ-JjJ"/>
+                                                <constraint firstItem="BzG-Jz-Ul2" firstAttribute="leading" secondItem="b6x-jw-rM8" secondAttribute="leadingMargin" id="5va-ce-gGA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TOZ-32-Ura" secondAttribute="bottom" constant="-3" id="IZC-aa-2Wu"/>
+                                                <constraint firstItem="0SF-fG-Wm0" firstAttribute="top" secondItem="b6x-jw-rM8" secondAttribute="topMargin" constant="-6" id="W1S-zI-8b8"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="trailing" secondItem="b6x-jw-rM8" secondAttribute="trailingMargin" id="ka5-3C-DFZ"/>
+                                                <constraint firstItem="TOZ-32-Ura" firstAttribute="leading" secondItem="b6x-jw-rM8" secondAttribute="leadingMargin" id="mDD-Re-fho"/>
+                                                <constraint firstItem="BzG-Jz-Ul2" firstAttribute="top" secondItem="b6x-jw-rM8" secondAttribute="topMargin" id="u8a-gT-qDd"/>
+                                                <constraint firstItem="0SF-fG-Wm0" firstAttribute="trailing" secondItem="b6x-jw-rM8" secondAttribute="trailingMargin" id="vnY-lr-S07"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mNd-ma-cfR" firstAttribute="top" secondItem="QFd-K8-3NO" secondAttribute="topMargin" id="JpA-3m-OiW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mNd-ma-cfR" secondAttribute="trailing" constant="-16" id="QUz-6B-zea"/>
+                            <constraint firstItem="mNd-ma-cfR" firstAttribute="bottom" secondItem="QFd-K8-3NO" secondAttribute="bottomMargin" id="QYz-IG-9zD"/>
+                            <constraint firstItem="mNd-ma-cfR" firstAttribute="leading" secondItem="QFd-K8-3NO" secondAttribute="leadingMargin" constant="-16" id="VDl-fu-3a2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNt-6t-tbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3118" y="735"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8mj-Ca-6UE">
@@ -266,7 +373,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="CCA99DD9-089C-4BFD-B7ED-FD9C60E46C64"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="FFE12E11-C4B5-467C-A60A-02CA4A71A8C7"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -305,6 +412,7 @@
     </scenes>
     <resources>
         <image name="A Chord" width="750" height="1095"/>
+        <image name="AChordLarge.png" width="1500" height="2190"/>
         <image name="Fret" width="29" height="30"/>
         <image name="Guitar" width="30" height="30"/>
     </resources>
