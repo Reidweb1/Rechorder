@@ -17,6 +17,18 @@
 		2811CBB91A3109AA008FC1B3 /* ChordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBB81A3109AA008FC1B3 /* ChordTableViewController.m */; };
 		2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */; };
 		2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CBC31A31125D008FC1B3 /* ChordsViewController.m */; };
+		2811CBC61A31376C008FC1B3 /* AChordLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBC51A31376C008FC1B3 /* AChordLarge.png */; };
+		2811CBD21A31377A008FC1B3 /* AMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBC71A31377A008FC1B3 /* AMinorChord.png */; };
+		2811CBD31A31377A008FC1B3 /* BChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBC81A31377A008FC1B3 /* BChord.png */; };
+		2811CBD41A31377A008FC1B3 /* BMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBC91A31377A008FC1B3 /* BMinorChord.png */; };
+		2811CBD51A31377A008FC1B3 /* CChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCA1A31377A008FC1B3 /* CChord.png */; };
+		2811CBD61A31377A008FC1B3 /* CMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCB1A31377A008FC1B3 /* CMinorChord.png */; };
+		2811CBD71A31377A008FC1B3 /* DChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCC1A31377A008FC1B3 /* DChord.png */; };
+		2811CBD81A31377A008FC1B3 /* DMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCD1A31377A008FC1B3 /* DMinorChord.png */; };
+		2811CBD91A31377A008FC1B3 /* EChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCE1A31377A008FC1B3 /* EChord.png */; };
+		2811CBDA1A31377A008FC1B3 /* EMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBCF1A31377A008FC1B3 /* EMinorChord.png */; };
+		2811CBDB1A31377A008FC1B3 /* FChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBD01A31377A008FC1B3 /* FChord.png */; };
+		2811CBDC1A31377A008FC1B3 /* FMinorChord.png in Resources */ = {isa = PBXBuildFile; fileRef = 2811CBD11A31377A008FC1B3 /* FMinorChord.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,18 @@
 		2811CBBB1A310A77008FC1B3 /* ChordTableSeeder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordTableSeeder.m; sourceTree = "<group>"; };
 		2811CBC21A31125D008FC1B3 /* ChordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordsViewController.h; sourceTree = "<group>"; };
 		2811CBC31A31125D008FC1B3 /* ChordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordsViewController.m; sourceTree = "<group>"; };
+		2811CBC51A31376C008FC1B3 /* AChordLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AChordLarge.png; sourceTree = "<group>"; };
+		2811CBC71A31377A008FC1B3 /* AMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AMinorChord.png; sourceTree = "<group>"; };
+		2811CBC81A31377A008FC1B3 /* BChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BChord.png; sourceTree = "<group>"; };
+		2811CBC91A31377A008FC1B3 /* BMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMinorChord.png; sourceTree = "<group>"; };
+		2811CBCA1A31377A008FC1B3 /* CChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CChord.png; sourceTree = "<group>"; };
+		2811CBCB1A31377A008FC1B3 /* CMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CMinorChord.png; sourceTree = "<group>"; };
+		2811CBCC1A31377A008FC1B3 /* DChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DChord.png; sourceTree = "<group>"; };
+		2811CBCD1A31377A008FC1B3 /* DMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DMinorChord.png; sourceTree = "<group>"; };
+		2811CBCE1A31377A008FC1B3 /* EChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EChord.png; sourceTree = "<group>"; };
+		2811CBCF1A31377A008FC1B3 /* EMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMinorChord.png; sourceTree = "<group>"; };
+		2811CBD01A31377A008FC1B3 /* FChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FChord.png; sourceTree = "<group>"; };
+		2811CBD11A31377A008FC1B3 /* FMinorChord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FMinorChord.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +128,18 @@
 			isa = PBXGroup;
 			children = (
 				2811CB8F1A30FC20008FC1B3 /* Info.plist */,
+				2811CBC51A31376C008FC1B3 /* AChordLarge.png */,
+				2811CBC71A31377A008FC1B3 /* AMinorChord.png */,
+				2811CBC81A31377A008FC1B3 /* BChord.png */,
+				2811CBC91A31377A008FC1B3 /* BMinorChord.png */,
+				2811CBCA1A31377A008FC1B3 /* CChord.png */,
+				2811CBCB1A31377A008FC1B3 /* CMinorChord.png */,
+				2811CBCC1A31377A008FC1B3 /* DChord.png */,
+				2811CBCD1A31377A008FC1B3 /* DMinorChord.png */,
+				2811CBCE1A31377A008FC1B3 /* EChord.png */,
+				2811CBCF1A31377A008FC1B3 /* EMinorChord.png */,
+				2811CBD01A31377A008FC1B3 /* FChord.png */,
+				2811CBD11A31377A008FC1B3 /* FMinorChord.png */,
 				2811CB901A30FC20008FC1B3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -236,9 +272,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2811CBD51A31377A008FC1B3 /* CChord.png in Resources */,
+				2811CBDC1A31377A008FC1B3 /* FMinorChord.png in Resources */,
+				2811CBD21A31377A008FC1B3 /* AMinorChord.png in Resources */,
+				2811CBD91A31377A008FC1B3 /* EChord.png in Resources */,
 				2811CB9D1A30FC20008FC1B3 /* Main.storyboard in Resources */,
+				2811CBD71A31377A008FC1B3 /* DChord.png in Resources */,
 				2811CBA21A30FC20008FC1B3 /* LaunchScreen.xib in Resources */,
+				2811CBDA1A31377A008FC1B3 /* EMinorChord.png in Resources */,
+				2811CBD41A31377A008FC1B3 /* BMinorChord.png in Resources */,
+				2811CBD31A31377A008FC1B3 /* BChord.png in Resources */,
+				2811CBC61A31376C008FC1B3 /* AChordLarge.png in Resources */,
+				2811CBD81A31377A008FC1B3 /* DMinorChord.png in Resources */,
+				2811CBD61A31377A008FC1B3 /* CMinorChord.png in Resources */,
 				2811CB9F1A30FC20008FC1B3 /* Images.xcassets in Resources */,
+				2811CBDB1A31377A008FC1B3 /* FChord.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

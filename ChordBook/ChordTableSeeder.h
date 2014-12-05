@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ChordTableSeeder : NSObject
 
@@ -14,5 +15,6 @@
 
 @property (strong, nonatomic) NSArray *rootNotes;
 @property (strong, nonatomic) NSArray *chords;
+@property (strong, nonatomic) NSMutableDictionary *photos;
 
 @end
