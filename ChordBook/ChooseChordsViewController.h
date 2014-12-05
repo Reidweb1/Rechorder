@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChooseChordsViewController : UIViewController
+@interface ChooseChordsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *sections;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

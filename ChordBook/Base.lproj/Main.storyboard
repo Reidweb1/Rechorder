@@ -157,8 +157,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-1h-6Qs">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-1h-6Qs">
                                 <rect key="frame" x="101" y="227" width="51" height="31"/>
+                                <connections>
+                                    <action selector="verseSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="8be-bM-r20"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Chords For:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXB-op-O7y">
                                 <rect key="frame" x="16" y="149" width="182" height="31"/>
@@ -178,8 +181,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-ez-ytw">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-ez-ytw">
                                 <rect key="frame" x="101" y="266" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chorusSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="lXG-gR-kw8"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bridge:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-Wl-rOc">
                                 <rect key="frame" x="16" y="308" width="69" height="28"/>
@@ -189,6 +195,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-Cq-O0c">
                                 <rect key="frame" x="101" y="305" width="51" height="31"/>
+                                <connections>
+                                    <action selector="bridgeSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="naY-lx-ke2"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intro:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-Nw-AwF">
                                 <rect key="frame" x="16" y="191" width="47" height="28"/>
@@ -198,6 +207,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HIw-Pr-A9V">
                                 <rect key="frame" x="101" y="188" width="51" height="31"/>
+                                <connections>
+                                    <action selector="introSwitchPressed:" destination="3F6-wk-uoc" eventType="valueChanged" id="T8j-xn-fCX"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shE-wX-IzS">
                                 <rect key="frame" x="16" y="502" width="85" height="41"/>
@@ -351,6 +363,9 @@
                             <constraint firstItem="mNd-ma-cfR" firstAttribute="leading" secondItem="QFd-K8-3NO" secondAttribute="leadingMargin" constant="-16" id="VDl-fu-3a2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="mNd-ma-cfR" id="inP-Q5-aJT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNt-6t-tbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,7 +396,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="3FC08A6C-8DF3-46EA-9D02-C8E4B9A1E3CB"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="C3B23210-AECD-4F80-9020-6D8F435B6D4F"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
