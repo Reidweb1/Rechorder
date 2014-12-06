@@ -10,11 +10,14 @@
 #import "SectionTableViewCell.h"
 #import "ChordPickerViewController.h"
 #import "CoreDataController.h"
+#import "Chord.h"
 
 @interface ChooseChordsViewController ()
 
 @property (strong, nonatomic) NSMutableArray *includedSections;
 @property (strong, nonatomic) SectionTableViewCell *currentSection;
+@property (strong, nonatomic) NSMutableArray *sectionTableCells;
+@property (strong, nonatomic) NSMutableArray *chordsInSection;
 
 @end
 
@@ -57,6 +60,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SECTION_CELL"];
     cell.sectionLabel.text = [self.includedSections objectAtIndex:indexPath.row];
+    [self.sectionTableCells addObject: cell];
     return cell;
 }
 
@@ -65,7 +69,6 @@
 }
 
 - (void) addChordPressed:(NSNotification *)notification {
-    NSLog(@"ChordButtonPressed");
     if ([notification.object isMemberOfClass:([SectionTableViewCell class])]) {
         self.currentSection = notification.object;
     } else {
@@ -81,8 +84,12 @@
 }
 
 - (void) saveButtonPressed:(id)sender {
-    NSLog(@"Save Button Pressed");
-    
+    for (SectionTableViewCell *cell in self.sectionTableCells) {
+        for (Chord *chord in cell.chords) {
+            [self.chordsInSection addObject:@[cell.textLabel.text, chord.chordName]];
+        }
+    }
+    [[CoreDataController controller] saveSong:self.navigationItem.title withSections:self.includedSections andChords:self.chordsInSection];
 }
 
 @end

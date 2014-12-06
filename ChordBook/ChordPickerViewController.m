@@ -21,6 +21,7 @@
     [super viewDidLoad];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
     // Do any additional setup after loading the view.
 }
 

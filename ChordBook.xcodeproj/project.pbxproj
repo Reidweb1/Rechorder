@@ -33,6 +33,9 @@
 		2811CC2F1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */; };
 		2811CC321A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */; };
 		2811CC331A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */; };
+		2811CC3F1A339A5D008FC1B3 /* CDSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC3E1A339A5D008FC1B3 /* CDSong.m */; };
+		2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC411A339A5E008FC1B3 /* CDChord.m */; };
+		2811CC451A339A5E008FC1B3 /* CDSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC441A339A5E008FC1B3 /* CDSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,12 @@
 		2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordPickerViewController.m; sourceTree = "<group>"; };
 		2811CC301A3259F1008FC1B3 /* ChordPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordPickerCollectionViewCell.h; sourceTree = "<group>"; };
 		2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		2811CC3D1A339A5D008FC1B3 /* CDSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSong.h; sourceTree = "<group>"; };
+		2811CC3E1A339A5D008FC1B3 /* CDSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSong.m; sourceTree = "<group>"; };
+		2811CC401A339A5E008FC1B3 /* CDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChord.h; sourceTree = "<group>"; };
+		2811CC411A339A5E008FC1B3 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
+		2811CC431A339A5E008FC1B3 /* CDSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSection.h; sourceTree = "<group>"; };
+		2811CC441A339A5E008FC1B3 /* CDSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +193,12 @@
 				2811CC151A32319C008FC1B3 /* CoreDataController.m */,
 				2811CC281A323E0A008FC1B3 /* Chord.h */,
 				2811CC291A323E0A008FC1B3 /* Chord.m */,
+				2811CC431A339A5E008FC1B3 /* CDSection.h */,
+				2811CC441A339A5E008FC1B3 /* CDSection.m */,
+				2811CC401A339A5E008FC1B3 /* CDChord.h */,
+				2811CC411A339A5E008FC1B3 /* CDChord.m */,
+				2811CC3D1A339A5D008FC1B3 /* CDSong.h */,
+				2811CC3E1A339A5D008FC1B3 /* CDSong.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2811CC3F1A339A5D008FC1B3 /* CDSong.m in Sources */,
 				2811CBDF1A313C0E008FC1B3 /* ChordDetailViewController.m in Sources */,
 				2811CC261A323CCB008FC1B3 /* ChordCollectionViewCell.m in Sources */,
 				2811CBBC1A310A77008FC1B3 /* ChordTableSeeder.m in Sources */,
@@ -313,7 +329,9 @@
 				2811CC1E1A323792008FC1B3 /* ChooseChordsViewController.m in Sources */,
 				2811CC2E1A324C49008FC1B3 /* ChordPickerViewController.m in Sources */,
 				2811CC2A1A323E0A008FC1B3 /* Chord.m in Sources */,
+				2811CC451A339A5E008FC1B3 /* CDSection.m in Sources */,
 				2811CC161A32319C008FC1B3 /* CoreDataController.m in Sources */,
+				2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */,
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
@@ -518,6 +536,7 @@
 				2811CBB31A30FC20008FC1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2811CBB41A30FC20008FC1B3 /* Build configuration list for PBXNativeTarget "ChordBookTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +545,7 @@
 				2811CBB61A30FC20008FC1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
