@@ -19,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.songTitleTextField.delegate = self;
     self.sections = [[NSMutableDictionary alloc] init];
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedOnScreen)];
+    [self.view addGestureRecognizer: gesture];
     // Do any additional setup after loading the view.
 }
 
@@ -69,7 +72,17 @@
     if ([segue.identifier isEqualToString:@"CHOOSE_CHORDS"]) {
         ChooseChordsViewController *destinationVC = segue.destinationViewController;
         destinationVC.sections = self.sections;
+        destinationVC.navigationItem.title = self.songTitleTextField.text;
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.songTitleTextField resignFirstResponder];
+    return true;
+}
+
+- (void) tappedOnScreen {
+    [self.songTitleTextField resignFirstResponder];
 }
 
 @end

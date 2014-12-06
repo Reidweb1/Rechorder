@@ -34,28 +34,29 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[ChordTableSeeder seeder].rootNotes count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[ChordTableSeeder seeder].chords[1] count];;
+    return [[ChordTableSeeder seeder].chordObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CHORD_CELL" forIndexPath:indexPath];
-    cell.textLabel.text = [ChordTableSeeder seeder].chords[indexPath.section][indexPath.row];
+    Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    cell.textLabel.text = chord.chordName;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.currentChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    [self performSegueWithIdentifier:@"CHORD_DETAIL" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"CHORD_DETAIL"]) {
         ChordDetailViewController *destinationVC = [segue destinationViewController];
-        destinationVC.chordImageView.image = self.currentChord.chordImage;
-        destinationVC.chordNameLabel.text = self.currentChord.chordName;
+        destinationVC.chord = self.currentChord;
     }
     
 }

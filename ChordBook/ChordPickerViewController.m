@@ -35,11 +35,9 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ChordPickerCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CHORD_PICKER_CELL" forIndexPath:indexPath];
-    cell.chordTitleLabel.text = @"TEST";
-//    ChordPickerCollectionViewCell *cell = [[ChordPickerCollectionViewCell alloc] init];
-//    Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
-//    cell.chordTitleLabel.text = chord.chordName;
-//    cell.chordImageView.image = chord.chordImage;
+    Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    cell.chordTitleLabel.text = chord.chordName;
+    cell.chordImageView.image = chord.chordImage;
     return cell;
 }
 

@@ -28,9 +28,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="obt-vg-A87" kind="show" identifier="CHORD_DETAIL" id="HbE-ei-Oki"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -46,6 +43,7 @@
                     <navigationItem key="navigationItem" title="Chords" id="zpt-kb-LfO"/>
                     <connections>
                         <outlet property="tableView" destination="Wpw-tr-y8q" id="fR3-tK-hKL"/>
+                        <segue destination="obt-vg-A87" kind="show" identifier="CHORD_DETAIL" id="adG-jt-v57"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ht-qk-tNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +68,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A Chord" translatesAutoresizingMaskIntoConstraints="NO" id="e3E-6d-vE8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3E-6d-vE8">
                                 <rect key="frame" x="16" y="154" width="200" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="CPX-wQ-dV2"/>
@@ -325,7 +323,7 @@
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
                                                                         <rect key="frame" x="42" y="8" width="75" height="109"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="75" id="sK8-pb-osO"/>
@@ -378,6 +376,8 @@
                             <constraint firstItem="mNd-ma-cfR" firstAttribute="leading" secondItem="QFd-K8-3NO" secondAttribute="leadingMargin" constant="-16" id="VDl-fu-3a2"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="mNd-ma-cfR" id="inP-Q5-aJT"/>
                     </connections>
@@ -421,7 +421,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AChordLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-JI-3vM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1A3-JI-3vM">
                                                     <rect key="frame" x="37" y="37" width="80" height="105"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="105" id="9lB-D0-XAL"/>
@@ -502,7 +502,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="063CCA50-3E9B-45DC-A7A4-76C6E9C2C3C7"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="9C6329A6-081D-412F-B4E8-B131FB5574CE"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -540,8 +540,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A Chord" width="750" height="1095"/>
-        <image name="AChordLarge.png" width="1500" height="2190"/>
         <image name="Fret" width="29" height="30"/>
         <image name="Guitar" width="30" height="30"/>
     </resources>

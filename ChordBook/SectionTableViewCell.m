@@ -29,7 +29,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ChordCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"SECTION_COLLECTION" forIndexPath:indexPath];
     Chord *chord = [self.chords objectAtIndex:indexPath.row];
-    cell.chordLabel.text = @"TEST";
+    cell.chordLabel.text = chord.chordName;
     cell.chordImageView.image = chord.chordImage;
     return cell;
 }

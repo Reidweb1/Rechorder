@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateSongViewController : UIViewController
+@interface CreateSongViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *songTitleTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *introSwitch;

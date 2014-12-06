@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.chordImageView.image = self.chord.chordImage;
+    self.chordNameLabel.text = self.chord.chordName;
     // Do any additional setup after loading the view.
 }
 

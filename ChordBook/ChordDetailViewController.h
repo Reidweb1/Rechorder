@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Chord.h"
 
 @interface ChordDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *chordNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *chordImageView;
+@property (strong, nonatomic) Chord *chord;
 
 @end
