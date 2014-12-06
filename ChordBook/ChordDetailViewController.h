@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *chordNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *chordImageView;
 @property (strong, nonatomic) Chord *chord;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @end

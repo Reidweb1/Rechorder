@@ -43,8 +43,6 @@
 
 - (NSMutableArray *) fillChordImages {
     NSArray *keys = @[@"A", @"Am", @"B", @"Bm", @"C", @"Cm", @"D", @"Dm", @"E", @"Em", @"F", @"Fm", @"G", @"Gm"];
-//    NSArray *pics = @[[UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"Amin"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"AMin"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]], [UIImage imageNamed: [NSString stringWithFormat:@"A"]]];
-    
     
     NSArray *pics = @[[UIImage imageNamed:@"A"], [UIImage imageNamed:@"Amin"], [UIImage imageNamed:@"B"], [UIImage imageNamed:@"Bmin"], [UIImage imageNamed:@"C"], [UIImage imageNamed:@"Cmin"], [UIImage imageNamed:@"D"], [UIImage imageNamed:@"Dmin"], [UIImage imageNamed:@"E"], [UIImage imageNamed:@"Emin"], [UIImage imageNamed:@"F"], [UIImage imageNamed:@"Fmin"], [UIImage imageNamed:@"G"], [UIImage imageNamed:@"Gmin"]];
     
