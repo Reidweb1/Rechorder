@@ -100,7 +100,23 @@
 }
 
 - (void) saveSong:(NSString *)song withSections:(NSMutableArray *)sections andChords:(NSMutableArray *)chords {
-    
+    CDSong *newSong = [NSEntityDescription insertNewObjectForEntityForName:@"CDSong" inManagedObjectContext:self.managedObjectContext];
+    newSong.songName = song;
+    for (NSString *section in sections) {
+        CDSection *newSection = [NSEntityDescription insertNewObjectForEntityForName:@"CDSection" inManagedObjectContext:self.managedObjectContext];
+        newSection.sectionName = section;
+        NSLog(@"Section Saved");
+        for (NSArray *chordArray in chords) {
+            if ([chordArray[0] isEqualToString: newSection.sectionName]) {
+                CDChord *newChord = [NSEntityDescription insertNewObjectForEntityForName:@"CDChord" inManagedObjectContext:self.managedObjectContext];
+                newChord.chordName = chordArray[1];
+                [newSection addChordsObject: newChord];
+                NSLog(@"Saved Chord To Section");
+            }
+        }
+        [newSong addSectionsObject: newSection];
+    }
+    [self saveContext];
 }
 
 

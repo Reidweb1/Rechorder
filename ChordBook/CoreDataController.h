@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "CDSong.h"
+#import "CDSection.h"
+#import "CDChord.h"
 
 @interface CoreDataController : NSObject
 

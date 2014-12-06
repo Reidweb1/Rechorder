@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.sectionTableCells = [[NSMutableArray alloc] init];
+    self.chordsInSection = [[NSMutableArray alloc] init];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed:)];
@@ -60,7 +62,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SECTION_CELL"];
     cell.sectionLabel.text = [self.includedSections objectAtIndex:indexPath.row];
-    [self.sectionTableCells addObject: cell];
+    [self.sectionTableCells addObject:cell];
     return cell;
 }
 
@@ -86,7 +88,14 @@
 - (void) saveButtonPressed:(id)sender {
     for (SectionTableViewCell *cell in self.sectionTableCells) {
         for (Chord *chord in cell.chords) {
-            [self.chordsInSection addObject:@[cell.textLabel.text, chord.chordName]];
+            if (cell.sectionLabel.text == nil) {
+                NSLog(@"Tried To Insert nil for Section text");
+            } else if (chord.chordName == nil) {
+                NSLog(@"Tried To Insert nil for Chord text");
+            } else {
+                NSArray *chordArray = @[cell.sectionLabel.text, chord.chordName];
+                [self.chordsInSection addObject: chordArray];
+            }
         }
     }
     [[CoreDataController controller] saveSong:self.navigationItem.title withSections:self.includedSections andChords:self.chordsInSection];
