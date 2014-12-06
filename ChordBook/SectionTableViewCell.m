@@ -17,13 +17,10 @@
     self.chords = [[NSMutableArray alloc] init];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    //self.viewController = [[UIViewController alloc] init];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

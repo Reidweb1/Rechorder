@@ -9,6 +9,7 @@
 #import "ChooseChordsViewController.h"
 #import "SectionTableViewCell.h"
 #import "ChordPickerViewController.h"
+#import "CoreDataController.h"
 
 @interface ChooseChordsViewController ()
 
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveButtonPressed:)];
     self.includedSections = [[NSMutableArray alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addChordPressed:) name: @"ADD_CHORD_FOR_SECTION" object:nil];
     
@@ -76,6 +78,11 @@
         ChordPickerViewController *destinationVC = segue.destinationViewController;
         destinationVC.senderCell = self.currentSection;
     }
+}
+
+- (void) saveButtonPressed:(id)sender {
+    NSLog(@"Save Button Pressed");
+    
 }
 
 @end

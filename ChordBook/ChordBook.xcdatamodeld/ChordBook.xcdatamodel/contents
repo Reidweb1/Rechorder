@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+    <entity name="Chord" syncable="YES">
+        <attribute name="chordName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="containedInSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Section" inverseName="chords" inverseEntity="Section" syncable="YES"/>
+    </entity>
+    <entity name="Section" syncable="YES">
+        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Chord" inverseName="containedInSection" inverseEntity="Chord" syncable="YES"/>
+        <relationship name="containedInSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="sections" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Song" syncable="YES">
+        <attribute name="songName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Section" inverseName="containedInSong" inverseEntity="Section" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Song" positionX="-225" positionY="-37" width="128" height="73"/>
+        <element name="Section" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="Chord" positionX="133" positionY="132" width="128" height="73"/>
+    </elements>
 </model>
