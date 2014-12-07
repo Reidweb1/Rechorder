@@ -13,6 +13,7 @@
 @interface MySongsViewController ()
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -22,8 +23,11 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.fetchedResultsController = [[CoreDataController controller] fetchUserSongs];
-    [self.tableView reloadData];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self setUpRefreshControl];
+    [self performFetchWithCompletion:^{
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +43,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.fetchedResultsController.fetchedObjects count];
+}
+
+- (void) performFetchWithCompletion:(void(^)())completion {
+    self.fetchedResultsController = [[CoreDataController controller] fetchUserSongs];
+    completion();
+}
+
+- (void) refreshPage:(UIRefreshControl *)refreshControl {
+    [self performFetchWithCompletion:^{
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
+    }];
+}
+
+- (void) setUpRefreshControl {
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"Pull To Refresh"];
+    [self.refreshControl setAttributedTitle: title];
+    [self.refreshControl addTarget:self action:@selector(refreshPage:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl.superview sendSubviewToBack:self.refreshControl];
 }
 
 @end
