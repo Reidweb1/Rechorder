@@ -17,6 +17,8 @@
 
 @implementation CreateSongViewController
 
+int count = 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.songTitleTextField.delegate = self;
@@ -32,38 +34,64 @@
 }
 
 - (IBAction)proceedButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"CHOOSE_CHORDS" sender:self];
+    if (count > 0 && ![self.songTitleTextField.text isEqualToString:@""]) {
+        [self performSegueWithIdentifier:@"CHOOSE_CHORDS" sender:self];
+    } else {
+        if (count == 0 && ![self.songTitleTextField.text isEqualToString:@""]) {
+            [self setAlertController:@"Add A Section" andMessage:@"You Need At Least One Section To Continue"];
+        } else if (count > 0 && [self.songTitleTextField.text isEqualToString:@""]) {
+            [self setAlertController:@"Add A Title" andMessage:@"You Need A Song Title To Continue"];
+        } else {
+            [self setAlertController:@"Add Title and Section" andMessage:@"You Need A Title and A Section to Continue"];
+        }
+    }
 }
 
 - (IBAction)introSwitchPressed:(id)sender {
     if (self.introSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Intro:"];
+        count += 1;
+        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Intro:"];
+        count -= 1;
+        NSLog(@"%d", count);
     }
 }
 
 - (IBAction)verseSwitchPressed:(id)sender {
     if (self.verseSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Verse:"];
+        count += 1;
+        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Verse:"];
+        count -= 1;
+        NSLog(@"%d", count);
     }
 }
 
 - (IBAction)chorusSwitchPressed:(id)sender {
     if (self.chorusSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Chorus:"];
+        count += 1;
+        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Chorus:"];
+        count -= 1;
+        NSLog(@"%d", count);
     }
 }
 
 - (IBAction)bridgeSwitchPressed:(id)sender {
     if (self.bridgeSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Bridge:"];
+        count += 1;
+        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Bridge:"];
+        count -= 1;
+        NSLog(@"%d", count);
     }
 }
 
@@ -83,6 +111,15 @@
 
 - (void) tappedOnScreen {
     [self.songTitleTextField resignFirstResponder];
+}
+
+- (void) setAlertController:(NSString *)title andMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alertController dismissViewControllerAnimated:true completion:nil];
+    }];
+    [alertController addAction: action];
+    [self presentViewController:alertController animated:true completion:nil];
 }
 
 @end

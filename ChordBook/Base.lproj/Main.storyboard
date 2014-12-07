@@ -506,7 +506,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="0DB3B3F0-30AE-49F8-BAC8-FA451BEC2526"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="1BE387B6-1882-4C2A-B1C8-85421BDF5AD2"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
