@@ -18,6 +18,7 @@
 @property (strong, nonatomic) SectionTableViewCell *currentSection;
 @property (strong, nonatomic) NSMutableArray *sectionTableCells;
 @property (strong, nonatomic) NSMutableArray *chordsInSection;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -99,6 +100,20 @@
         }
     }
     [[CoreDataController controller] saveSong:self.navigationItem.title withSections:self.includedSections andChords:self.chordsInSection];
+    [self.navigationController popToRootViewControllerAnimated:true];
+}
+
+- (void) refreshPage:(UIRefreshControl *)refreshControl {
+    NSLog(@"Page is Refreshing");
+    [self.tableView reloadData];
+}
+
+- (void) setUpRefreshControl {
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"Pull To Refresh"];
+    [self.refreshControl setAttributedTitle: title];
+    [self.refreshControl addTarget:self action:@selector(refreshPage:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl.superview sendSubviewToBack:self.refreshControl];
 }
 
 @end

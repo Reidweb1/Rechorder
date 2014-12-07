@@ -119,5 +119,19 @@
     [self saveContext];
 }
 
+- (NSFetchedResultsController *) fetchUserSongs {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"CDSong"];
+    request.sortDescriptors = [[NSArray alloc] initWithObjects:[[NSSortDescriptor sortDescriptorWithKey:@"songName" ascending:false]init], nil];
+    NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath: nil cacheName: nil];
+    NSError *error = nil;
+    [controller performFetch: &error];
+    if (!error) {
+        return controller;
+    } else {
+        NSLog(@"Error on Fetch Request");
+        return nil;
+    }
+}
+
 
 @end

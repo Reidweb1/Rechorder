@@ -21,6 +21,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (void) saveSong:(NSString *)song withSections:(NSMutableArray *)sections andChords:(NSMutableArray *)chords;
+- (NSFetchedResultsController *) fetchUserSongs;
 
 + (instancetype)controller;
 

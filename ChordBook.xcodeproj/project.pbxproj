@@ -36,6 +36,7 @@
 		2811CC3F1A339A5D008FC1B3 /* CDSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC3E1A339A5D008FC1B3 /* CDSong.m */; };
 		2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC411A339A5E008FC1B3 /* CDChord.m */; };
 		2811CC451A339A5E008FC1B3 /* CDSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC441A339A5E008FC1B3 /* CDSection.m */; };
+		2811CC4B1A33D5D8008FC1B3 /* MySongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC4A1A33D5D8008FC1B3 /* MySongsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		2811CC411A339A5E008FC1B3 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
 		2811CC431A339A5E008FC1B3 /* CDSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSection.h; sourceTree = "<group>"; };
 		2811CC441A339A5E008FC1B3 /* CDSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSection.m; sourceTree = "<group>"; };
+		2811CC491A33D5D8008FC1B3 /* MySongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySongsViewController.h; sourceTree = "<group>"; };
+		2811CC4A1A33D5D8008FC1B3 /* MySongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySongsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				2811CC1D1A323792008FC1B3 /* ChooseChordsViewController.m */,
 				2811CC2C1A324C49008FC1B3 /* ChordPickerViewController.h */,
 				2811CC2D1A324C49008FC1B3 /* ChordPickerViewController.m */,
+				2811CC491A33D5D8008FC1B3 /* MySongsViewController.h */,
+				2811CC4A1A33D5D8008FC1B3 /* MySongsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				2811CC451A339A5E008FC1B3 /* CDSection.m in Sources */,
 				2811CC161A32319C008FC1B3 /* CoreDataController.m in Sources */,
 				2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */,
+				2811CC4B1A33D5D8008FC1B3 /* MySongsViewController.m in Sources */,
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
