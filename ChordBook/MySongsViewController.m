@@ -22,11 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.fetchedResultsController.delegate = self;
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self setUpRefreshControl];
     [self performFetchWithCompletion:^{
-        [self.tableView reloadData];
+        NSLog(@"Completed");
+        self.tableView.delegate = self;
+    }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self performFetchWithCompletion:^{
+       self.fetchedResultsController.delegate = self;
     }];
 }
 
@@ -52,8 +60,8 @@
 
 - (void) refreshPage:(UIRefreshControl *)refreshControl {
     [self performFetchWithCompletion:^{
-        [self.tableView reloadData];
         [self.refreshControl endRefreshing];
+        self.fetchedResultsController.delegate = self;
     }];
 }
 
@@ -64,5 +72,55 @@
     [self.tableView addSubview:self.refreshControl];
     [self.refreshControl.superview sendSubviewToBack:self.refreshControl];
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        CDSong *song = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+        [[CoreDataController controller] deleteSong: song];
+        [self performFetchWithCompletion:^{
+           NSLog(@"Fetch Completed Post Deletion");
+            self.fetchedResultsController.delegate = self;
+        }];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        
+    }
+}
+
+#pragma mark NSFetchedResultsController Delegate Methods
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    switch (type) {
+        case 1:
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case 2:
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case 3:
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case 4:
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        default:
+            break;
+    }
+}
+
+
 
 @end

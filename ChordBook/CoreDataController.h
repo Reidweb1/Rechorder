@@ -22,6 +22,7 @@
 - (NSURL *)applicationDocumentsDirectory;
 - (void) saveSong:(NSString *)song withSections:(NSMutableArray *)sections andChords:(NSMutableArray *)chords;
 - (NSFetchedResultsController *) fetchUserSongs;
+- (void) deleteSong:(CDSong *)song;
 
 + (instancetype)controller;
 

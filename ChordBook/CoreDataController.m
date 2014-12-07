@@ -133,5 +133,16 @@
     }
 }
 
+- (void) deleteSong:(CDSong *)song {
+    for (CDSection *section in song.sections) {
+        for (CDChord *chord in section.chords) {
+            [self.managedObjectContext deleteObject:chord];
+        }
+        [self.managedObjectContext deleteObject:section];
+    }
+    [self.managedObjectContext deleteObject:song];
+    [self saveContext];
+}
+
 
 @end
