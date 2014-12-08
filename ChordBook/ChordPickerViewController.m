@@ -43,7 +43,6 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     Chord *selectedChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
-    selectedChord.index = [NSNumber numberWithInt: *(self.senderCell.counter)];
     [self.senderCell.chords addObject:selectedChord];
     self.senderCell.counter++;
     [self dismissViewControllerAnimated:true completion:nil];

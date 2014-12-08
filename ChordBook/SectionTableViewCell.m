@@ -17,7 +17,6 @@
     self.chords = [[NSMutableArray alloc] init];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.counter = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,6 +28,7 @@
     Chord *chord = [self.chords objectAtIndex:indexPath.row];
     cell.chordLabel.text = chord.chordName;
     cell.chordImageView.image = chord.chordImage;
+    chord.index = [NSNumber numberWithLong:indexPath.row];
     return cell;
 }
 
