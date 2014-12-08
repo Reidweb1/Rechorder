@@ -27,13 +27,6 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-//    UIImage *tabBarImage = [UIImage imageNamed:@"Fret"];
-//    tabBarImage = [tabBarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UIImage *tabBarSelectedImage = [UIImage imageNamed:@"Note"];
-//    tabBarSelectedImage = [tabBarSelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Chords" image:tabBarImage selectedImage:tabBarSelectedImage];
-//    self.tabBarItem.image = tabBarImage;
-//    self.tabBarItem.selectedImage = tabBarSelectedImage;
 }
 
 - (void)didReceiveMemoryWarning {

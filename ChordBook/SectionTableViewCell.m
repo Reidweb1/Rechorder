@@ -17,6 +17,7 @@
     self.chords = [[NSMutableArray alloc] init];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.counter = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
