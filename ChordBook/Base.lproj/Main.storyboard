@@ -118,9 +118,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="NXl-02-32r" kind="show" identifier="SHOW_SONG" id="ijl-Dq-Gwl"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -142,6 +139,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qIj-eQ-ats" id="RSt-oE-M0v"/>
+                        <segue destination="NXl-02-32r" kind="show" identifier="SHOW_SONG" id="xmq-rI-I12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjO-oA-zK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4j-Ib-ZA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2373" y="1395"/>
+            <point key="canvasLocation" x="2243" y="1443"/>
         </scene>
         <!--Choose Chords View Controller-->
         <scene sceneID="3jc-Cw-b3M">
@@ -632,7 +630,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="0A89C080-D4D5-4238-AFB4-78963D4585D2"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="E8FAA128-4FE9-4B89-B996-FB50D9D99A8E"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>

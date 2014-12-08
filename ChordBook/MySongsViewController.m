@@ -7,6 +7,7 @@
 //
 
 #import "MySongsViewController.h"
+#import "SongDetailViewController.h"
 #import "CoreDataController.h"
 #import "CDSong.h"
 
@@ -14,6 +15,7 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) CDSong *selectedSong;
 
 @end
 
@@ -42,7 +44,19 @@
     [super didReceiveMemoryWarning];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_SONG"]) {
+        SongDetailViewController *destinationVC = segue.destinationViewController;
+        destinationVC.selectedSong = self.selectedSong;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedSong = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"SHOW_SONG" sender:self];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SONG_CELL"];
     CDSong *song = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
     cell.textLabel.text = song.songName;
