@@ -8,12 +8,14 @@
 
 #import "SongDetailTableViewCell.h"
 #import "SongCollectionViewCell.h"
+#import "CDChord.h"
 
 @implementation SongDetailTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
 }
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -23,12 +25,14 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SongCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"SONG_CHORD_CELL" forIndexPath:indexPath];
-    cell.chordLabel.text = @"Amin";
+    CDChord *chord = self.chordsInSection[indexPath.row];
+    cell.chordLabel.text = chord.chordName;
+    cell.chordImageView.image = [UIImage imageNamed:chord.chordName];
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return [self.chordsInSection count];
 }
 
 @end

@@ -54,6 +54,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedSong = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"SHOW_SONG" sender:self];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
