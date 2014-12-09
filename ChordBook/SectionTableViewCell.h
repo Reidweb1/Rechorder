@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChooseChordsViewController.h"
 
 @interface SectionTableViewCell : UITableViewCell <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *sectionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *chords;
+@property (weak, nonatomic) ChooseChordsViewController *viewController;
 @property (assign, nonatomic) int *counter;
 
 @end

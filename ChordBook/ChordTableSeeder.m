@@ -42,9 +42,9 @@
 }
 
 - (NSMutableArray *) fillChordImages {
-    NSArray *keys = @[@"A", @"Am", @"B", @"Bm", @"C", @"Cm", @"D", @"Dm", @"E", @"Em", @"F", @"Fm", @"G", @"Gm"];
+    NSArray *keys = @[@"A", @"Am", @"B", @"Bm", @"C", @"Cm", @"D", @"Dm", @"E", @"Em", @"F", @"Fm",@"F#", @"F#m", @"G", @"Gm"];
     
-    NSArray *pics = @[[UIImage imageNamed:@"A"], [UIImage imageNamed:@"Am"], [UIImage imageNamed:@"B"], [UIImage imageNamed:@"Bm"], [UIImage imageNamed:@"C"], [UIImage imageNamed:@"Cm"], [UIImage imageNamed:@"D"], [UIImage imageNamed:@"Dm"], [UIImage imageNamed:@"E"], [UIImage imageNamed:@"Em"], [UIImage imageNamed:@"F"], [UIImage imageNamed:@"Fm"], [UIImage imageNamed:@"G"], [UIImage imageNamed:@"Gm"]];
+    NSArray *pics = @[[UIImage imageNamed:@"A"], [UIImage imageNamed:@"Am"], [UIImage imageNamed:@"B"], [UIImage imageNamed:@"Bm"], [UIImage imageNamed:@"C"], [UIImage imageNamed:@"Cm"], [UIImage imageNamed:@"D"], [UIImage imageNamed:@"Dm"], [UIImage imageNamed:@"E"], [UIImage imageNamed:@"Em"], [UIImage imageNamed:@"F"], [UIImage imageNamed:@"Fm"], [UIImage imageNamed:@"F#"], [UIImage imageNamed:@"F#m"], [UIImage imageNamed:@"G"], [UIImage imageNamed:@"Gm"]];
     
     
     NSMutableArray *chordObjects = [[NSMutableArray alloc] init];

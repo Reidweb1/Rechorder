@@ -62,6 +62,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SECTION_CELL"];
     cell.sectionLabel.text = [self.includedSections objectAtIndex:indexPath.row];
+    cell.viewController = self;
     [self.sectionTableCells addObject:cell];
     return cell;
 }
