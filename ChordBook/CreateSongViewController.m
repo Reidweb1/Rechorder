@@ -38,11 +38,11 @@ int count = 0;
         [self performSegueWithIdentifier:@"CHOOSE_CHORDS" sender:self];
     } else {
         if (count == 0 && ![self.songTitleTextField.text isEqualToString:@""]) {
-            [self setAlertController:@"Add A Section" andMessage:@"You Need At Least One Section To Continue"];
+            [self setAlertController:@"Add a Section" andMessage:@"You Need at Least One Section to Continue"];
         } else if (count > 0 && [self.songTitleTextField.text isEqualToString:@""]) {
-            [self setAlertController:@"Add A Title" andMessage:@"You Need A Song Title To Continue"];
+            [self setAlertController:@"Add a Title" andMessage:@"You Need a Song Title to Continue"];
         } else {
-            [self setAlertController:@"Add Title and Section" andMessage:@"You Need A Title and A Section to Continue"];
+            [self setAlertController:@"Add Title and Section" andMessage:@"You Need a Title and a Section to Continue"];
         }
     }
 }
