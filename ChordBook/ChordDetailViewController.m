@@ -18,9 +18,9 @@
     [super viewDidLoad];
     self.chordImageView.image = self.chord.chordImage;
     self.chordNameLabel.text = self.chord.chordName;
-    self.trailingConstraint.constant = self.view.frame.size.width/2;
-    self.bottomConstraint.constant = self.view.frame.size.width/2;
-    // Do any additional setup after loading the view.
+    self.trailingConstraint.constant = self.view.frame.size.width*0.25;
+    self.bottomConstraint.constant = self.view.frame.size.width*0.15;
+    
 }
 
 - (void)didReceiveMemoryWarning {

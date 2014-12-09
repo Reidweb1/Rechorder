@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *sectionLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *chords;
+@property (assign, nonatomic) int *counter;
 
 @end

@@ -616,21 +616,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vzL-Y2-1aG" kind="relationship" relationship="viewControllers" id="56o-HI-MhU"/>
                         <segue destination="Dbd-rY-xrs" kind="relationship" relationship="viewControllers" id="QHZ-5R-dSb"/>
+                        <segue destination="vzL-Y2-1aG" kind="relationship" relationship="viewControllers" id="dQs-th-cZz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0h-kx-PD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="408"/>
         </scene>
-        <!--Find Chords-->
+        <!--Chords-->
         <scene sceneID="AxC-BX-59N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vzL-Y2-1aG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find Chords" image="Fret" id="QdP-4I-yHY">
+                    <tabBarItem key="tabBarItem" title="Chords" image="FretBoard" id="QdP-4I-yHY">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="E8FAA128-4FE9-4B89-B996-FB50D9D99A8E"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="958D30D5-85D4-48A6-A6B1-64EB1C019088"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -651,7 +651,7 @@
         <scene sceneID="NGh-dE-U6d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dbd-rY-xrs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Songs" image="Guitar" selectedImage="Fret" id="hgc-yh-ot9"/>
+                    <tabBarItem key="tabBarItem" title="My Songs" image="Guitar" id="hgc-yh-ot9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="daQ-pM-8bK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -668,7 +668,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fret" width="29" height="30"/>
+        <image name="958D30D5-85D4-48A6-A6B1-64EB1C019088" width="29" height="30"/>
+        <image name="FretBoard" width="24" height="26"/>
         <image name="Guitar" width="30" height="30"/>
     </resources>
 </document>

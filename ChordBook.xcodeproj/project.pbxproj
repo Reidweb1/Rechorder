@@ -34,12 +34,12 @@
 		2811CC321A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */; };
 		2811CC331A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */; };
 		2811CC3F1A339A5D008FC1B3 /* CDSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC3E1A339A5D008FC1B3 /* CDSong.m */; };
-		2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC411A339A5E008FC1B3 /* CDChord.m */; };
 		2811CC451A339A5E008FC1B3 /* CDSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC441A339A5E008FC1B3 /* CDSection.m */; };
 		2811CC4B1A33D5D8008FC1B3 /* MySongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC4A1A33D5D8008FC1B3 /* MySongsViewController.m */; };
 		2811CC4E1A3639CF008FC1B3 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC4D1A3639CF008FC1B3 /* SongDetailViewController.m */; };
 		2811CC511A363A48008FC1B3 /* SongDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC501A363A48008FC1B3 /* SongDetailTableViewCell.m */; };
 		2811CC541A363ADB008FC1B3 /* SongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */; };
+		284C6BC11A365D5A00E38459 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C6BC01A365D5A00E38459 /* CDChord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +89,6 @@
 		2811CC311A3259F1008FC1B3 /* ChordPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordPickerCollectionViewCell.m; sourceTree = "<group>"; };
 		2811CC3D1A339A5D008FC1B3 /* CDSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSong.h; sourceTree = "<group>"; };
 		2811CC3E1A339A5D008FC1B3 /* CDSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSong.m; sourceTree = "<group>"; };
-		2811CC401A339A5E008FC1B3 /* CDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChord.h; sourceTree = "<group>"; };
-		2811CC411A339A5E008FC1B3 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
 		2811CC431A339A5E008FC1B3 /* CDSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSection.h; sourceTree = "<group>"; };
 		2811CC441A339A5E008FC1B3 /* CDSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSection.m; sourceTree = "<group>"; };
 		2811CC491A33D5D8008FC1B3 /* MySongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySongsViewController.h; sourceTree = "<group>"; };
@@ -101,6 +99,8 @@
 		2811CC501A363A48008FC1B3 /* SongDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailTableViewCell.m; sourceTree = "<group>"; };
 		2811CC521A363ADB008FC1B3 /* SongCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongCollectionViewCell.h; sourceTree = "<group>"; };
 		2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCollectionViewCell.m; sourceTree = "<group>"; };
+		284C6BBF1A365D5A00E38459 /* CDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChord.h; sourceTree = "<group>"; };
+		284C6BC01A365D5A00E38459 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,10 +209,10 @@
 				2811CC151A32319C008FC1B3 /* CoreDataController.m */,
 				2811CC281A323E0A008FC1B3 /* Chord.h */,
 				2811CC291A323E0A008FC1B3 /* Chord.m */,
+				284C6BBF1A365D5A00E38459 /* CDChord.h */,
+				284C6BC01A365D5A00E38459 /* CDChord.m */,
 				2811CC431A339A5E008FC1B3 /* CDSection.h */,
 				2811CC441A339A5E008FC1B3 /* CDSection.m */,
-				2811CC401A339A5E008FC1B3 /* CDChord.h */,
-				2811CC411A339A5E008FC1B3 /* CDChord.m */,
 				2811CC3D1A339A5D008FC1B3 /* CDSong.h */,
 				2811CC3E1A339A5D008FC1B3 /* CDSong.m */,
 			);
@@ -354,10 +354,10 @@
 				2811CC541A363ADB008FC1B3 /* SongCollectionViewCell.m in Sources */,
 				2811CC161A32319C008FC1B3 /* CoreDataController.m in Sources */,
 				2811CC511A363A48008FC1B3 /* SongDetailTableViewCell.m in Sources */,
-				2811CC421A339A5E008FC1B3 /* CDChord.m in Sources */,
 				2811CC4B1A33D5D8008FC1B3 /* MySongsViewController.m in Sources */,
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
+				284C6BC11A365D5A00E38459 /* CDChord.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
 				2811CC1A1A3232F2008FC1B3 /* CreateSongViewController.m in Sources */,
 			);

@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSString *chordName;
 @property (strong, nonatomic) UIImage *chordImage;
+@property (strong, nonatomic) NSNumber *index;
 
 - (instancetype) init:(UIImage*)image withName:(NSString*)name;
 

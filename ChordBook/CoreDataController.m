@@ -106,12 +106,15 @@
         CDSection *newSection = [NSEntityDescription insertNewObjectForEntityForName:@"CDSection" inManagedObjectContext:self.managedObjectContext];
         newSection.sectionName = section;
         NSLog(@"Section Saved");
+        int countIndex = 0;
         for (NSArray *chordArray in chords) {
             if ([chordArray[0] isEqualToString: newSection.sectionName]) {
                 CDChord *newChord = [NSEntityDescription insertNewObjectForEntityForName:@"CDChord" inManagedObjectContext:self.managedObjectContext];
                 newChord.chordName = chordArray[1];
+                newChord.index = [NSNumber numberWithInt:countIndex];
                 [newSection addChordsObject: newChord];
                 NSLog(@"Saved Chord To Section");
+                countIndex += 1;
             }
         }
         [newSong addSectionsObject: newSection];

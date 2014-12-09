@@ -18,9 +18,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     [ChordTableSeeder seeder];
     [CoreDataController controller];
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    //UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    
+    tabBarItem2.title = @"Chords";
+    tabBarItem2.image = [UIImage imageNamed:@"FretBoard"];
+    tabBarItem2.selectedImage = [UIImage imageNamed:@"FretBoard"];
+    
     return YES;
 }
 

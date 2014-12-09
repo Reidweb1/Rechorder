@@ -28,6 +28,7 @@
     Chord *chord = [self.chords objectAtIndex:indexPath.row];
     cell.chordLabel.text = chord.chordName;
     cell.chordImageView.image = chord.chordImage;
+    chord.index = [NSNumber numberWithLong:indexPath.row];
     return cell;
 }
 

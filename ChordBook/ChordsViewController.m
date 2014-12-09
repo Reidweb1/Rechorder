@@ -10,6 +10,7 @@
 #import "ChordTableSeeder.h"
 #import "ChordDetailViewController.h"
 #import "Chord.h"
+#import "AppDelegate.h"
 
 @interface ChordsViewController ()
 
@@ -31,10 +32,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

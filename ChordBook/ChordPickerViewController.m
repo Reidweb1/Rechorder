@@ -21,7 +21,6 @@
     [super viewDidLoad];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +44,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     Chord *selectedChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
     [self.senderCell.chords addObject:selectedChord];
+    self.senderCell.counter++;
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
