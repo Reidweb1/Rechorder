@@ -14,8 +14,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.chords = self.fillChords;
-        self.rootNotes = self.fillRoots;
         self.chordObjects = self.fillChordImages;
     }
     return self;
@@ -28,17 +26,6 @@
         instance = [self new];
     });
     return instance;
-}
-
-- (NSArray *) fillRoots {
-    NSArray *roots = @[@"A", @"B", @"C", @"D", @"E", @"F", @"G"];
-    return roots;
-}
-
-- (NSArray *) fillChords {
-    NSArray *chords = @[@[@"A", @"Am"], @[@"B", @"Bm"], @[@"C", @"Cm"], @[@"D", @"Dm"], @[@"E", @"Em"], @[@"F", @"Fm"], @[@"G", @"Gm"]];
-    
-    return chords;
 }
 
 - (NSMutableArray *) fillChordImages {
