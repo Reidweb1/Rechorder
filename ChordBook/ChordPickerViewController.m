@@ -13,9 +13,22 @@
 
 @interface ChordPickerViewController ()
 
+@property (strong, nonatomic) NSCache *chordPhotos;
+
 @end
 
 @implementation ChordPickerViewController
+
++ (instancetype)picker {
+    static id instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [self new];
+    });
+    return instance;
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +50,12 @@
     ChordPickerCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"CHORD_PICKER_CELL" forIndexPath:indexPath];
     Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
     cell.chordTitleLabel.text = chord.chordName;
-    cell.chordImageView.image = chord.chordImage;
+    if ([self.chordPhotos objectForKey:chord.chordName]) {
+        cell.chordImageView.image = [self.chordPhotos objectForKey:chord.chordName];
+    } else {
+        cell.chordImageView.image = chord.chordImage;
+        [self.chordPhotos setObject:chord.chordImage forKey:chord.chordName];
+    }
     return cell;
 }
 

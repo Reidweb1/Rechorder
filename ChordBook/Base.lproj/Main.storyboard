@@ -322,15 +322,15 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-Ut-Tue">
-                                                                        <rect key="frame" x="8" y="8" width="10" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
+                                                                        <rect key="frame" x="8" y="8" width="9" height="18"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="15"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eag-Pr-xb6">
-                                                                        <rect key="frame" x="42" y="8" width="75" height="109"/>
+                                                                        <rect key="frame" x="52" y="8" width="65" height="109"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="75" id="8cJ-Ar-1lw"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="8cJ-Ar-1lw"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>

@@ -11,6 +11,8 @@
 
 @interface ChordPickerViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
++ (instancetype)picker;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) SectionTableViewCell *senderCell;
 

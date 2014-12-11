@@ -48,6 +48,10 @@
     [self.tableView reloadData];
 }
 
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     if (self.currentSection) {
         [self.currentSection.collectionView reloadData];
