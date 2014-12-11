@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ChordTableSeeder.h"
 #import "CoreDataController.h"
+#import <iAd/iAd.h>
 
 @interface AppDelegate ()
 
@@ -22,7 +23,6 @@
     [CoreDataController controller];
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
-    //UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
     
     tabBarItem2.title = @"Chords";
