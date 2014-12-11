@@ -43,7 +43,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SongDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"VIEW_SONG_TABLE_CELL"];
-    NSString *rowName = [self getSectionTitle:indexPath.row];
+    NSString *rowName = [self getSectionTitle:(int)indexPath.row];
     cell.sectionLabel.text = rowName;
     cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:rowName];
     cell.collectionView.dataSource = cell;
@@ -85,12 +85,11 @@
 
 - (NSString *) getSectionTitle:(int)index {
     NSString *rowName = self.sectionNames[index];
-    if (![[self.orderedSectionsWithChords objectForKey:rowName] isKindOfClass:[NSMutableArray class]]) {
-        if (![[self.orderedSectionsWithChords objectForKey:rowName] count]) {
-            [self getSectionTitle:index + 1];
-        }
+    if (![self.orderedSectionsWithChords objectForKey:rowName]) {
+        return [self getSectionTitle:index + 1];
+    } else {
+        return rowName;
     }
-    return rowName;
 }
 
 

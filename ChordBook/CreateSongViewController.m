@@ -28,8 +28,14 @@ int count = 0;
     // Do any additional setup after loading the view.
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    count = 0;
+    self.songTitleTextField.text = @"";
+    self.introSwitch.on = false;
+    self.verseSwitch.on = false;
+    self.chorusSwitch.on = false;
+    self.bridgeSwitch.on = false;
 }
 
 - (void)didReceiveMemoryWarning {
