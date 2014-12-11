@@ -13,7 +13,7 @@
 
 @interface SongDetailViewController ()
 
-@property (strong, nonatomic) NSMutableArray *sectionNames;
+@property (strong, nonatomic) NSArray *sectionNames;
 @property (strong, nonatomic) NSMutableDictionary *orderedSectionsWithChords;
 
 @end
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.sectionNames = [[NSMutableArray alloc] init];
+    self.sectionNames = @[@"Intro:", @"Verse:", @"Chorus:", @"Bridge:"];
     self.orderedSectionsWithChords = [[NSMutableDictionary alloc] init];
     [self sortSections:^{
         [self.tableView reloadData];
@@ -39,13 +39,13 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [self.sectionNames removeAllObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SongDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"VIEW_SONG_TABLE_CELL"];
-    cell.sectionLabel.text = [self.sectionNames objectAtIndex:indexPath.row];
-    cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:[self.sectionNames objectAtIndex:indexPath.row]];
+    NSString *rowName = [self getSectionTitle:indexPath.row];
+    cell.sectionLabel.text = rowName;
+    cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:rowName];
     cell.collectionView.dataSource = cell;
     cell.collectionView.delegate = cell;
     return cell;
@@ -57,18 +57,16 @@
 
 - (void) sortSections: (void(^)())completion{
     for (CDSection *section in self.selectedSong.sections) {
+        
         if ([section.sectionName isEqualToString:@"Intro:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Intro:"];
-            [self.sectionNames addObject:@"Intro:"];
+            
         } else if ([section.sectionName isEqualToString:@"Verse:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Verse:"];
-            [self.sectionNames addObject:@"Verse:"];
         } else if ([section.sectionName isEqualToString:@"Chorus:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Chorus:"];
-            [self.sectionNames addObject:@"Chorus:"];
         } else if ([section.sectionName isEqualToString:@"Bridge:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Bridge:"];
-            [self.sectionNames addObject:@"Bridge:"];
         }
     }
     completion();
@@ -84,5 +82,16 @@
     }
     return orderedChords;
 }
+
+- (NSString *) getSectionTitle:(int)index {
+    NSString *rowName = self.sectionNames[index];
+    if (![[self.orderedSectionsWithChords objectForKey:rowName] isKindOfClass:[NSMutableArray class]]) {
+        if (![[self.orderedSectionsWithChords objectForKey:rowName] count]) {
+            [self getSectionTitle:index + 1];
+        }
+    }
+    return rowName;
+}
+
 
 @end
