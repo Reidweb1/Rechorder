@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreImage/CoreImage.h>
 
 @interface ChordTableSeeder : NSObject
 
 + (instancetype)seeder;
 
-@property (strong, nonatomic) NSArray *rootNotes;
-@property (strong, nonatomic) NSArray *chords;
 @property (strong, nonatomic) NSMutableArray *chordObjects;
+@property (strong, nonatomic) NSMutableArray *thumbnailPhotos;
 
 @end

@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.chordObjects = self.fillChordImages;
+        self.thumbnailPhotos = [self createThumbnails:self.chordObjects];
     }
     return self;
 }
@@ -40,6 +41,19 @@
         [chordObjects insertObject:newChord atIndex:i];
     }
     return chordObjects;
+}
+
+- (NSMutableArray *) createThumbnails:(NSMutableArray *)chords {
+    CGSize size = CGSizeMake(100, 100);
+    UIGraphicsBeginImageContext(size);
+    NSMutableArray *newPics = [[NSMutableArray alloc] init];
+    for (__strong Chord *chord in chords) {
+        UIImage *image = chord.chordImage;
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        [newPics addObject: image];
+    }
+    UIGraphicsEndImageContext();
+    return newPics;
 }
 
 @end
