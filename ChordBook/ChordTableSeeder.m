@@ -11,10 +11,13 @@
 
 @implementation ChordTableSeeder
 
+#pragma mark - Initializer and Sigleton Method
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         self.chordObjects = self.fillChordImages;
+        self.thumbnailPhotos = [self createThumbnails:self.chordObjects];
     }
     return self;
 }
@@ -28,6 +31,8 @@
     return instance;
 }
 
+#pragma mark - Creating UIImage Objects
+
 - (NSMutableArray *) fillChordImages {
     NSArray *keys = @[@"A", @"A7", @"Amaj7", @"Am", @"Am7", @"B", @"B7", @"Bm", @"Bb", @"C", @"C7", @"Cmaj7", @"Cm", @"D", @"D7", @"Dmaj7", @"Dm", @"Dm7", @"Db", @"Dbm", @"E", @"E7", @"Em", @"Em7", @"F", @"Fmaj7", @"Fm", @"F#", @"F#m", @"G", @"G7", @"Gm", @"G#m"];
     
@@ -40,6 +45,19 @@
         [chordObjects insertObject:newChord atIndex:i];
     }
     return chordObjects;
+}
+
+- (NSMutableArray *) createThumbnails:(NSMutableArray *)chords {
+    CGSize size = CGSizeMake(75, 125);
+    UIGraphicsBeginImageContext(size);
+    NSMutableArray *newPics = [[NSMutableArray alloc] init];
+    for (__strong Chord *chord in chords) {
+        UIImage *image = chord.chordImage;
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        [newPics addObject: image];
+    }
+    UIGraphicsEndImageContext();
+    return newPics;
 }
 
 @end

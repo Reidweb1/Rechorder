@@ -40,7 +40,6 @@
 		2811CC511A363A48008FC1B3 /* SongDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC501A363A48008FC1B3 /* SongDetailTableViewCell.m */; };
 		2811CC541A363ADB008FC1B3 /* SongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */; };
 		284C6BC11A365D5A00E38459 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C6BC01A365D5A00E38459 /* CDChord.m */; };
-		284C6C2C1A38EAC800E38459 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284C6C2B1A38EAC800E38459 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +101,6 @@
 		2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCollectionViewCell.m; sourceTree = "<group>"; };
 		284C6BBF1A365D5A00E38459 /* CDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChord.h; sourceTree = "<group>"; };
 		284C6BC01A365D5A00E38459 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
-		284C6C2B1A38EAC800E38459 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284C6C2C1A38EAC800E38459 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +124,6 @@
 		2811CB821A30FC1F008FC1B3 = {
 			isa = PBXGroup;
 			children = (
-				284C6C2B1A38EAC800E38459 /* iAd.framework */,
 				2811CB8D1A30FC1F008FC1B3 /* ChordBook */,
 				2811CBAA1A30FC20008FC1B3 /* ChordBookTests */,
 				2811CB8C1A30FC1F008FC1B3 /* Products */,

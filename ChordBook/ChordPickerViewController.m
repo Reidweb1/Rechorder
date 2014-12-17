@@ -34,12 +34,10 @@
     [super viewDidLoad];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -53,7 +51,7 @@
     if ([self.chordPhotos objectForKey:chord.chordName]) {
         cell.chordImageView.image = [self.chordPhotos objectForKey:chord.chordName];
     } else {
-        cell.chordImageView.image = chord.chordImage;
+        cell.chordImageView.image = [UIImage imageNamed:chord.chordName];
         [self.chordPhotos setObject:chord.chordImage forKey:chord.chordName];
     }
     return cell;

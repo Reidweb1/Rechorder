@@ -25,7 +25,6 @@ int count = 0;
     self.sections = [[NSMutableDictionary alloc] init];
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedOnScreen)];
     [self.view addGestureRecognizer: gesture];
-    // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,7 +39,6 @@ int count = 0;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)proceedButtonPressed:(id)sender {
