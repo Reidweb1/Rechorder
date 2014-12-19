@@ -62,6 +62,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - TableView Delegate Methods
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SectionTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SECTION_CELL"];
     cell.sectionLabel.text = [self.includedSections objectAtIndex:indexPath.row];
@@ -88,6 +90,8 @@
         destinationVC.senderCell = self.currentSection;
     }
 }
+
+#pragma mark - SaveButton Pressed
 
 - (void) saveButtonPressed:(id)sender {
     for (SectionTableViewCell *cell in self.sectionTableCells) {
