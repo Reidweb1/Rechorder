@@ -55,6 +55,8 @@ int count = 0;
     }
 }
 
+#pragma mark - UISwitch IBActions
+
 - (IBAction)introSwitchPressed:(id)sender {
     if (self.introSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Intro:"];
@@ -120,6 +122,8 @@ int count = 0;
 - (void) tappedOnScreen {
     [self.songTitleTextField resignFirstResponder];
 }
+
+#pragma mark - Set Alert Controller Functions
 
 - (void) setAlertController:(NSString *)title andMessage:(NSString *)message {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];

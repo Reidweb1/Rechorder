@@ -33,6 +33,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - TableView Delegate Methods
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[ChordTableSeeder seeder].chordObjects count];
 }
