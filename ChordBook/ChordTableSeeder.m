@@ -47,15 +47,15 @@
     return chordObjects;
 }
 
-- (NSMutableArray *) createThumbnails:(NSMutableArray *)chords {
+- (NSMutableDictionary *) createThumbnails:(NSMutableArray *)chords {
     CGSize size = CGSizeMake(75, 125);
-    NSMutableArray *newPics = [[NSMutableArray alloc] init];
+    NSMutableDictionary *newPics = [[NSMutableDictionary alloc] init];
     for (__strong Chord *chord in chords) {
         UIImage *image = chord.chordImage;
         UIGraphicsBeginImageContext(size);
         [image drawInRect:CGRectMake(0, 0, 75, 125)];
         image = UIGraphicsGetImageFromCurrentImageContext();
-        [newPics addObject: image];
+        [newPics setValue:image forKey:chord.chordName];
         UIGraphicsEndImageContext();
     }
     return newPics;
