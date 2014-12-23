@@ -308,7 +308,7 @@
                                                     <rect key="frame" x="8" y="39" width="584" height="153"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n8b-Ae-fdy">
-                                                        <size key="itemSize" width="125" height="125"/>
+                                                        <size key="itemSize" width="130" height="125"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
@@ -318,7 +318,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="125"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-Ut-Tue">
@@ -328,7 +328,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eag-Pr-xb6">
-                                                                        <rect key="frame" x="52" y="8" width="65" height="109"/>
+                                                                        <rect key="frame" x="57" y="8" width="65" height="109"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="65" id="8cJ-Ar-1lw"/>
                                                                         </constraints>
@@ -429,7 +429,7 @@
                                                     <rect key="frame" x="8" y="45" width="584" height="146"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o9l-c6-gUh">
-                                                        <size key="itemSize" width="125" height="125"/>
+                                                        <size key="itemSize" width="130" height="125"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
@@ -439,7 +439,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="125"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaz-Am-HVR">
@@ -448,9 +448,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
-                                                                        <rect key="frame" x="42" y="8" width="75" height="109"/>
+                                                                        <rect key="frame" x="57" y="8" width="65" height="109"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="75" id="sK8-pb-osO"/>
+                                                                            <constraint firstAttribute="width" constant="65" id="sK8-pb-osO"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>

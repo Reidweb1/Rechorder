@@ -61,11 +61,9 @@ int count = 0;
     if (self.introSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Intro:"];
         count += 1;
-        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Intro:"];
         count -= 1;
-        NSLog(@"%d", count);
     }
 }
 
@@ -73,11 +71,9 @@ int count = 0;
     if (self.verseSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Verse:"];
         count += 1;
-        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Verse:"];
         count -= 1;
-        NSLog(@"%d", count);
     }
 }
 
@@ -85,11 +81,9 @@ int count = 0;
     if (self.chorusSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Chorus:"];
         count += 1;
-        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Chorus:"];
         count -= 1;
-        NSLog(@"%d", count);
     }
 }
 
@@ -97,11 +91,9 @@ int count = 0;
     if (self.bridgeSwitch.on) {
         [self.sections setValue:@"On" forKey:@"Bridge:"];
         count += 1;
-        NSLog(@"%d", count);
     } else {
         [self.sections setValue:@"Off" forKey:@"Bridge:"];
         count -= 1;
-        NSLog(@"%d", count);
     }
 }
 

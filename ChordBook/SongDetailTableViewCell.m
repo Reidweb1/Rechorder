@@ -8,6 +8,7 @@
 
 #import "SongDetailTableViewCell.h"
 #import "SongCollectionViewCell.h"
+#import "ChordTableSeeder.h"
 #import "CDChord.h"
 
 @implementation SongDetailTableViewCell
@@ -25,7 +26,7 @@
     SongCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"SONG_CHORD_CELL" forIndexPath:indexPath];
     CDChord *chord = self.chordsInSection[indexPath.row];
     cell.chordLabel.text = chord.chordName;
-    cell.chordImageView.image = [UIImage imageNamed:chord.chordName];
+    cell.chordImageView.image = [[ChordTableSeeder seeder].thumbnailPhotos objectForKey:chord.chordName];
     return cell;
 }
 

@@ -10,6 +10,7 @@
 #import "ChordCollectionViewCell.h"
 #import "Chord.h"
 #import "ChordPickerViewController.h"
+#import "ChordTableSeeder.h"
 
 @implementation SectionTableViewCell
 
@@ -27,7 +28,7 @@
     ChordCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"SECTION_COLLECTION" forIndexPath:indexPath];
     Chord *chord = [self.chords objectAtIndex:indexPath.row];
     cell.chordLabel.text = chord.chordName;
-    cell.chordImageView.image = chord.chordImage;
+    cell.chordImageView.image = [[ChordTableSeeder seeder].thumbnailPhotos objectForKey:chord.chordName];
     chord.index = [NSNumber numberWithLong:indexPath.row];
     return cell;
 }

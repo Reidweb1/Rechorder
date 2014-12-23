@@ -15,6 +15,6 @@
 + (instancetype)seeder;
 
 @property (strong, nonatomic) NSMutableArray *chordObjects;
-@property (strong, nonatomic) NSMutableArray *thumbnailPhotos;
+@property (strong, nonatomic) NSMutableDictionary *thumbnailPhotos;
 
 @end
