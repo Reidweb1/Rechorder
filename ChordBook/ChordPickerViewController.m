@@ -51,7 +51,7 @@
     if ([self.chordPhotos objectForKey:chord.chordName]) {
         cell.chordImageView.image = [self.chordPhotos objectForKey:chord.chordName];
     } else {
-        cell.chordImageView.image = [UIImage imageNamed:chord.chordName];
+        cell.chordImageView.image = [ChordTableSeeder seeder].thumbnailPhotos[indexPath.row];
         [self.chordPhotos setObject:chord.chordImage forKey:chord.chordName];
     }
     return cell;

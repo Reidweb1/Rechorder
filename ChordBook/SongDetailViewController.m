@@ -18,6 +18,8 @@
 
 @end
 
+int counter = 0;
+
 @implementation SongDetailViewController
 
 - (void)viewDidLoad {
@@ -35,13 +37,18 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    counter = 0;
+}
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SongDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"VIEW_SONG_TABLE_CELL"];
-    NSString *rowName = [self getSectionTitle:(int)indexPath.row];
+    NSString *rowName = [self getSectionTitle];
     cell.sectionLabel.text = rowName;
     cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:rowName];
     cell.collectionView.dataSource = cell;
@@ -58,7 +65,6 @@
         
         if ([section.sectionName isEqualToString:@"Intro:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Intro:"];
-            
         } else if ([section.sectionName isEqualToString:@"Verse:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Verse:"];
         } else if ([section.sectionName isEqualToString:@"Chorus:"]) {
@@ -81,14 +87,17 @@
     return orderedChords;
 }
 
-- (NSString *) getSectionTitle:(int)index {
-    NSString *rowName = self.sectionNames[index];
+- (NSString *) getSectionTitle {
+    NSString *rowName = self.sectionNames[counter];
     if (![self.orderedSectionsWithChords objectForKey:rowName]) {
-        return [self getSectionTitle:index + 1];
+        counter++;
+        return [self getSectionTitle];
     } else {
+        counter++;
         return rowName;
     }
 }
 
 
 @end
+
