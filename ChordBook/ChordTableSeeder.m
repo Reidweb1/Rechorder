@@ -49,14 +49,15 @@
 
 - (NSMutableArray *) createThumbnails:(NSMutableArray *)chords {
     CGSize size = CGSizeMake(75, 125);
-    UIGraphicsBeginImageContext(size);
     NSMutableArray *newPics = [[NSMutableArray alloc] init];
     for (__strong Chord *chord in chords) {
         UIImage *image = chord.chordImage;
+        UIGraphicsBeginImageContext(size);
+        [image drawInRect:CGRectMake(0, 0, 75, 125)];
         image = UIGraphicsGetImageFromCurrentImageContext();
         [newPics addObject: image];
+        UIGraphicsEndImageContext();
     }
-    UIGraphicsEndImageContext();
     return newPics;
 }
 
