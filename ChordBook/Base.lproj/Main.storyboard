@@ -327,8 +327,8 @@
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eag-Pr-xb6">
-                                                                        <rect key="frame" x="52" y="8" width="65" height="109"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eag-Pr-xb6">
+                                                                        <rect key="frame" x="57" y="8" width="65" height="109"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="65" id="8cJ-Ar-1lw"/>
                                                                         </constraints>
@@ -447,8 +447,8 @@
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
-                                                                        <rect key="frame" x="52" y="8" width="65" height="109"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5h0-70-4DV">
+                                                                        <rect key="frame" x="57" y="8" width="65" height="109"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="65" id="sK8-pb-osO"/>
                                                                         </constraints>

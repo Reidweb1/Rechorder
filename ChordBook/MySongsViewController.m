@@ -29,7 +29,6 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self setUpRefreshControl];
     [self performFetchWithCompletion:^{
-        NSLog(@"Completed");
         self.tableView.delegate = self;
     }];
 }
@@ -98,7 +97,6 @@
         CDSong *song = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
         [[CoreDataController controller] deleteSong: song];
         [self performFetchWithCompletion:^{
-           NSLog(@"Fetch Completed Post Deletion");
             self.fetchedResultsController.delegate = self;
         }];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
