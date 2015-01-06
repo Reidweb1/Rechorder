@@ -33,27 +33,42 @@
 }
 
 - (void)orientationChange:(UIInterfaceOrientation) orientation {
-    switch (orientation)
-    {
-        case UIInterfaceOrientationPortrait:
-        case UIInterfaceOrientationPortraitUpsideDown:
-        {
-            [UIView animateWithDuration:1.0f animations:^{
-                self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
-            }];
-        }
-            
-            break;
-        case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-        {
-            [UIView animateWithDuration:1.0f animations:^{
-                self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
-            }];
-        }
-            break;
-        case UIInterfaceOrientationUnknown:break;
+    
+    if (UIDeviceOrientationIsLandscape(orientation)) {
+        [UIView animateWithDuration:1.0f animations:^{
+            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+        }];
+    } else if (UIDeviceOrientationIsPortrait(orientation)) {
+        [UIView animateWithDuration:1.0f animations:^{
+            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+        }];
+    } else {
+        NSLog(@"ERROR");
     }
+    
+//    switch (orientation)
+//    {
+//        case UIInterfaceOrientationPortrait:
+//        case UIInterfaceOrientationPortraitUpsideDown:{
+//            [UIView animateWithDuration:1.0f animations:^{
+//                self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+//            }];
+//        }
+//            
+//            break;
+//        case UIInterfaceOrientationLandscapeLeft:
+//        case UIInterfaceOrientationLandscapeRight:{
+//            [UIView animateWithDuration:1.0f animations:^{
+//                self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+//            }];
+//        }
+//            break;
+//        case UIInterfaceOrientationUnknown: {
+//            NSLog(@"Unknown");
+//        }
+//            
+//            break;
+//    }
 }
 
 - (void)setImageViewAndLabel {
