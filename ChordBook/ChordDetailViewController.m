@@ -40,13 +40,16 @@
 
 - (void)setImageView {
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
-        
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
+        self.chordImageView.image = self.chord.chordImage;
+        [self.view addSubview:self.chordImageView];
     } else if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
-        
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
+        self.chordImageView.image = self.chord.chordImage;
+        [self.view addSubview:self.chordImageView];
+    } else {
+        NSLog(@"ERRORZZZ!!!");
     }
-    self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
-    self.chordImageView.image = self.chord.chordImage;
-    [self.view addSubview:self.chordImageView];
 }
 
 @end
