@@ -10,21 +10,43 @@
 
 @interface ChordDetailViewController ()
 
+@property (strong, nonatomic) IBOutlet UIImageView *chordImageView;
+@property (strong, nonatomic) NSLayoutConstraint *imageLeadingConstraint;
+@property (strong, nonatomic) NSLayoutConstraint *imageTrailingConstraint;
+
 @end
 
 @implementation ChordDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.chordImageView.image = self.chord.chordImage;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
     self.chordNameLabel.text = self.chord.chordName;
-    self.trailingConstraint.constant = self.view.frame.size.width*0.25;
-    self.bottomConstraint.constant = self.view.frame.size.width*0.15;
-    
+    [self setImageView];
+    [self.view addSubview:self.chordImageView];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)orientationChange {
+    NSLog(@"ORIENTATION CHANGED!");
+}
+
+- (void)setImageView {
+    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+        
+    } else if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+        
+    }
+    self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
+    self.chordImageView.image = self.chord.chordImage;
+    [self.view addSubview:self.chordImageView];
 }
 
 @end

@@ -68,16 +68,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3E-6d-vE8">
-                                <rect key="frame" x="16" y="154" width="295" height="394"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="e3E-6d-vE8" secondAttribute="trailing" constant="273" id="Bzs-bj-VKA"/>
-                            <constraint firstItem="e3E-6d-vE8" firstAttribute="leading" secondItem="bRb-Ag-N08" secondAttribute="leadingMargin" id="N3c-Ro-rz1"/>
-                            <constraint firstItem="e3E-6d-vE8" firstAttribute="top" secondItem="uCk-mt-Cdj" secondAttribute="bottom" constant="8" id="Ts4-Ol-NgQ"/>
-                            <constraint firstItem="dLL-uM-zC2" firstAttribute="top" secondItem="e3E-6d-vE8" secondAttribute="bottom" constant="8" id="Tsq-Nu-9Uw"/>
                             <constraint firstItem="uCk-mt-Cdj" firstAttribute="top" secondItem="UfX-dU-vAa" secondAttribute="bottom" constant="8" id="f1x-tb-14q"/>
                             <constraint firstItem="uCk-mt-Cdj" firstAttribute="leading" secondItem="bRb-Ag-N08" secondAttribute="leadingMargin" id="tCk-tc-lMk"/>
                         </constraints>
@@ -85,10 +78,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="Tsq-Nu-9Uw" id="Tb4-o5-2uL"/>
-                        <outlet property="chordImageView" destination="e3E-6d-vE8" id="9Ll-ut-7ae"/>
                         <outlet property="chordNameLabel" destination="uCk-mt-Cdj" id="6d8-o2-LSf"/>
-                        <outlet property="trailingConstraint" destination="Bzs-bj-VKA" id="XdS-KH-Kwa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orX-Wb-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
