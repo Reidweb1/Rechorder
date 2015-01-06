@@ -21,9 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
-    self.chordNameLabel.text = self.chord.chordName;
     [self setImageView];
-    [self.view addSubview:self.chordImageView];
 }
 
 - (void)dealloc {
@@ -39,8 +37,9 @@
 }
 
 - (void)setImageView {
+    self.chordNameLabel.text = self.chord.chordName;
     if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
-        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.height/3, self.view.frame.size.height/2)];
         self.chordImageView.image = self.chord.chordImage;
         [self.view addSubview:self.chordImageView];
     } else if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
@@ -50,6 +49,7 @@
     } else {
         NSLog(@"ERRORZZZ!!!");
     }
+    [self.view addSubview:self.chordImageView];
 }
 
 @end
