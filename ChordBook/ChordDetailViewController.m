@@ -36,7 +36,7 @@
     
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
         [UIView animateWithDuration:0.25f animations:^{
-            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, self.view.frame.size.width/4, self.view.frame.size.height/2);
         }];
     } else if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
         [UIView animateWithDuration:0.25f animations:^{
@@ -50,7 +50,7 @@
 - (void)setImageViewAndLabel {
     self.chordNameLabel.text = self.chord.chordName;
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
-        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.height/3, self.view.frame.size.height/2)];
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, self.view.frame.size.height/4, self.view.frame.size.height/2)];
         self.chordImageView.image = self.chord.chordImage;
         [self.view addSubview:self.chordImageView];
     } else if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {

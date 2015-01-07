@@ -16,5 +16,6 @@
 
 @property (strong, nonatomic) NSMutableArray *chordObjects;
 @property (strong, nonatomic) NSMutableDictionary *thumbnailPhotos;
+@property (strong, nonatomic) NSArray *sectionNames;
 
 @end

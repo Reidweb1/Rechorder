@@ -18,6 +18,7 @@
     if (self) {
         self.chordObjects = self.fillChordImages;
         self.thumbnailPhotos = [self createThumbnails:self.chordObjects];
+        self.sectionNames = @[@"Intro:", @"Verse:", @"Chorus:", @"Bridge:"];
     }
     return self;
 }
