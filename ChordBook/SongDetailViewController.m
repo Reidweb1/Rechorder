@@ -8,12 +8,13 @@
 
 #import "SongDetailViewController.h"
 #import "SongDetailTableViewCell.h"
+#import "ChordTableSeeder.h"
 #import "CDSection.h"
 #import "CDChord.h"
 
 @interface SongDetailViewController ()
 
-@property (strong, nonatomic) NSArray *sectionNames;
+@property (strong, nonatomic) NSMutableArray *sectionNames;
 @property (strong, nonatomic) NSMutableDictionary *orderedSectionsWithChords;
 
 @end
@@ -26,10 +27,12 @@ int counter = 0;
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.sectionNames = @[@"Intro:", @"Verse:", @"Chorus:", @"Bridge:"];
     self.orderedSectionsWithChords = [[NSMutableDictionary alloc] init];
+    self.sectionNames = [[NSMutableArray alloc] init];
     [self sortSections:^{
-        [self.tableView reloadData];
+        [self sortSectionTitles:^{
+            [self.tableView reloadData];
+        }];
     }];
 }
 
@@ -37,22 +40,19 @@ int counter = 0;
     [super didReceiveMemoryWarning];
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    counter = 0;
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    counter = 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SongDetailTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"VIEW_SONG_TABLE_CELL"];
-    NSString *rowName = [self getSectionTitle];
+    NSString *rowName = [self.sectionNames objectAtIndex: indexPath.row];
     cell.sectionLabel.text = rowName;
     cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:rowName];
     cell.collectionView.dataSource = cell;
     cell.collectionView.delegate = cell;
+    NSLog(@"%ld", (long)indexPath.row);
     return cell;
 }
 
@@ -60,23 +60,26 @@ int counter = 0;
     return [self.selectedSong.sections count];
 }
 
-- (void) sortSections: (void(^)())completion{
+- (void)sortSections: (void(^)())completion{
     for (CDSection *section in self.selectedSong.sections) {
-        
         if ([section.sectionName isEqualToString:@"Intro:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Intro:"];
+            
         } else if ([section.sectionName isEqualToString:@"Verse:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Verse:"];
+            
         } else if ([section.sectionName isEqualToString:@"Chorus:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Chorus:"];
+            
         } else if ([section.sectionName isEqualToString:@"Bridge:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Bridge:"];
+            
         }
     }
     completion();
 }
 
-- (NSMutableArray *) sortChords:(CDSection *)section {
+- (NSMutableArray *)sortChords:(CDSection *)section {
     NSMutableArray *orderedChords = [[NSMutableArray alloc] init];
     for (int i = 0; i < [section.chords count]; i++) {
         [orderedChords addObject: @""];
@@ -87,15 +90,20 @@ int counter = 0;
     return orderedChords;
 }
 
-- (NSString *) getSectionTitle {
-    NSString *rowName = self.sectionNames[counter];
-    if (![self.orderedSectionsWithChords objectForKey:rowName]) {
-        counter++;
-        return [self getSectionTitle];
-    } else {
-        counter++;
-        return rowName;
-    }
+- (void)sortSectionTitles: (void(^)())completion {
+    while (true) {
+        if (counter > 3) {
+            break;
+        }
+        NSString *rowName = [ChordTableSeeder seeder].sectionNames[counter];
+        if (![self.orderedSectionsWithChords objectForKey:rowName]) {
+            counter++;
+        } else {
+            [self.sectionNames addObject: rowName];
+            counter++;
+        }
+    };
+    completion();
 }
 
 

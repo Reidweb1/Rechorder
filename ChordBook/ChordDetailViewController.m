@@ -10,21 +10,62 @@
 
 @interface ChordDetailViewController ()
 
+@property (strong, nonatomic) IBOutlet UIImageView *chordImageView;
+@property (strong, nonatomic) NSLayoutConstraint *imageLeadingConstraint;
+@property (strong, nonatomic) NSLayoutConstraint *imageTrailingConstraint;
+
 @end
 
 @implementation ChordDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.chordImageView.image = self.chord.chordImage;
-    self.chordNameLabel.text = self.chord.chordName;
-    self.trailingConstraint.constant = self.view.frame.size.width*0.25;
-    self.bottomConstraint.constant = self.view.frame.size.width*0.15;
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    [self setImageViewAndLabel];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)orientationChange:(UIInterfaceOrientation) orientation {
+    
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+        [UIView animateWithDuration:0.25f animations:^{
+            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height*.15, self.view.frame.size.width/4, self.view.frame.size.height*0.65);
+        }];
+    } else if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
+        [UIView animateWithDuration:0.25f animations:^{
+            self.chordImageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2);
+        }];
+    } else {
+        NSLog(@"ERROR");
+    }
+}
+
+- (void)setImageViewAndLabel {
+    self.chordNameLabel.text = self.chord.chordName;
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/4, self.view.frame.size.height/4, self.view.frame.size.height*0.65)];
+        self.chordImageView.image = self.chord.chordImage;
+        [self.view addSubview:self.chordImageView];
+    } else if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
+        
+        
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.chordNameLabel.frame.origin.x, self.chordNameLabel.frame.origin.y + self.chordNameLabel.frame.size.height, self.view.frame.size.width*0.60, self.view.frame.size.height/2)];
+        self.chordImageView.image = self.chord.chordImage;
+        [self.view addSubview:self.chordImageView];
+    
+    
+    
+    } else {
+        NSLog(@"ERROR");
+    }
+    [self.view addSubview:self.chordImageView];
 }
 
 @end
