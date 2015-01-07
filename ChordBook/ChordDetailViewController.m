@@ -54,9 +54,14 @@
         self.chordImageView.image = self.chord.chordImage;
         [self.view addSubview:self.chordImageView];
     } else if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
-        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)];
+        
+        
+        self.chordImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.chordNameLabel.frame.origin.x, self.chordNameLabel.frame.origin.y + self.chordNameLabel.frame.size.height, self.view.frame.size.width*0.60, self.view.frame.size.height/2)];
         self.chordImageView.image = self.chord.chordImage;
         [self.view addSubview:self.chordImageView];
+    
+    
+    
     } else {
         NSLog(@"ERROR");
     }
