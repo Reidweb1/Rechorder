@@ -60,7 +60,7 @@ int counter = 0;
     return [self.selectedSong.sections count];
 }
 
-- (void) sortSections: (void(^)())completion{
+- (void)sortSections: (void(^)())completion{
     for (CDSection *section in self.selectedSong.sections) {
         if ([section.sectionName isEqualToString:@"Intro:"]) {
             [self.orderedSectionsWithChords setValue:[self sortChords:section] forKey:@"Intro:"];
@@ -79,7 +79,7 @@ int counter = 0;
     completion();
 }
 
-- (NSMutableArray *) sortChords:(CDSection *)section {
+- (NSMutableArray *)sortChords:(CDSection *)section {
     NSMutableArray *orderedChords = [[NSMutableArray alloc] init];
     for (int i = 0; i < [section.chords count]; i++) {
         [orderedChords addObject: @""];
@@ -90,7 +90,7 @@ int counter = 0;
     return orderedChords;
 }
 
-- (void) sortSectionTitles: (void(^)())completion {
+- (void)sortSectionTitles: (void(^)())completion {
     while (true) {
         if (counter > 3) {
             break;
