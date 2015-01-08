@@ -52,7 +52,6 @@ int counter = 0;
     cell.chordsInSection = [self.orderedSectionsWithChords objectForKey:rowName];
     cell.collectionView.dataSource = cell;
     cell.collectionView.delegate = cell;
-    NSLog(@"%ld", (long)indexPath.row);
     return cell;
 }
 
