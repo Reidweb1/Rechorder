@@ -42,12 +42,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CHORD_CELL" forIndexPath:indexPath];
     Chord *chord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.text = chord.chordName;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.currentChord = [ChordTableSeeder seeder].chordObjects[indexPath.row];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:true];
     [self performSegueWithIdentifier:@"CHORD_DETAIL" sender:self];
 }
 
