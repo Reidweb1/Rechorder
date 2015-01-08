@@ -82,8 +82,7 @@
 }
 
 - (void) setUpRefreshControl {
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"Pull To Refresh"];
-    [self.refreshControl setAttributedTitle: title];
+    self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self action:@selector(refreshPage:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshControl];
     [self.refreshControl.superview sendSubviewToBack:self.refreshControl];
