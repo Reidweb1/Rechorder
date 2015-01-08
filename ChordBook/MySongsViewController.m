@@ -53,13 +53,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedSong = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"SHOW_SONG" sender:self];
     [self.tableView deselectRowAtIndexPath:indexPath animated:true];
+    [self performSegueWithIdentifier:@"SHOW_SONG" sender:self];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"SONG_CELL"];
     CDSong *song = [self.fetchedResultsController.fetchedObjects objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.text = song.songName;
     return cell;
 }
