@@ -40,6 +40,8 @@
 		2811CC511A363A48008FC1B3 /* SongDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC501A363A48008FC1B3 /* SongDetailTableViewCell.m */; };
 		2811CC541A363ADB008FC1B3 /* SongCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */; };
 		284C6BC11A365D5A00E38459 /* CDChord.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C6BC01A365D5A00E38459 /* CDChord.m */; };
+		285686241A6451E100F238B3 /* OnBoardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 285686221A6451E100F238B3 /* OnBoardingViewController.m */; };
+		285686251A6451E100F238B3 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285686231A6451E100F238B3 /* OnBoardingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,9 @@
 		2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongCollectionViewCell.m; sourceTree = "<group>"; };
 		284C6BBF1A365D5A00E38459 /* CDChord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDChord.h; sourceTree = "<group>"; };
 		284C6BC01A365D5A00E38459 /* CDChord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDChord.m; sourceTree = "<group>"; };
+		285686211A6451E100F238B3 /* OnBoardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnBoardingViewController.h; sourceTree = "<group>"; };
+		285686221A6451E100F238B3 /* OnBoardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnBoardingViewController.m; sourceTree = "<group>"; };
+		285686231A6451E100F238B3 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +201,8 @@
 				2811CC4A1A33D5D8008FC1B3 /* MySongsViewController.m */,
 				2811CC4C1A3639CF008FC1B3 /* SongDetailViewController.h */,
 				2811CC4D1A3639CF008FC1B3 /* SongDetailViewController.m */,
+				285686211A6451E100F238B3 /* OnBoardingViewController.h */,
+				285686221A6451E100F238B3 /* OnBoardingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 				2811CC501A363A48008FC1B3 /* SongDetailTableViewCell.m */,
 				2811CC521A363ADB008FC1B3 /* SongCollectionViewCell.h */,
 				2811CC531A363ADB008FC1B3 /* SongCollectionViewCell.m */,
+				285686231A6451E100F238B3 /* OnBoardingViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				2811CB9D1A30FC20008FC1B3 /* Main.storyboard in Resources */,
 				2811CBA21A30FC20008FC1B3 /* LaunchScreen.xib in Resources */,
 				2811CB9F1A30FC20008FC1B3 /* Images.xcassets in Resources */,
+				285686251A6451E100F238B3 /* OnBoardingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +367,7 @@
 				2811CBC41A31125D008FC1B3 /* ChordsViewController.m in Sources */,
 				2811CB941A30FC20008FC1B3 /* AppDelegate.m in Sources */,
 				284C6BC11A365D5A00E38459 /* CDChord.m in Sources */,
+				285686241A6451E100F238B3 /* OnBoardingViewController.m in Sources */,
 				2811CB911A30FC20008FC1B3 /* main.m in Sources */,
 				2811CC1A1A3232F2008FC1B3 /* CreateSongViewController.m in Sources */,
 			);
